@@ -1,0 +1,247 @@
+<title>PickMyFund Select 5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: ledger-style single column — summary strip, growth chart, then the books (model, new-client, sectors), rules last */
+:root{
+  --bg:#FAFAF7; --surface:#ffffff; --ink:#0F1B1E; --muted:#6B7280; --line:#E5E3DC;
+  --teal:#B8923B; --gold:#5E6B6E; --grey:#94A3A6;
+  --up:#1F7A4D; --down:#B4413A; --chip:#F1EFE8;
+  --band:#0A1517; --band-ink:#ffffff; --brand:#B8923B; --brand-on-band:#C9A44C;
+  --f-display:"Inter","Helvetica Neue",Arial,sans-serif; --f-serif:var(--f-display); --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A1517; --surface:#0F1B1E; --ink:#F3F2EE; --muted:#9AA6A9; --line:#22302F;
+  --teal:#C9A44C; --gold:#94A3A6; --grey:#5E6B6E; --up:#55C08A; --down:#EE8279; --chip:#172527;
+  --band:#0F1B1E; --band-ink:#ffffff; --brand:#C9A44C; --brand-on-band:#C9A44C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A1517; --surface:#0F1B1E; --ink:#F3F2EE; --muted:#9AA6A9; --line:#22302F;
+  --teal:#C9A44C; --gold:#94A3A6; --grey:#5E6B6E; --up:#55C08A; --down:#EE8279; --chip:#172527;
+  --band:#0F1B1E; --band-ink:#ffffff; --brand:#C9A44C; --brand-on-band:#C9A44C; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-display);font-size:15px;line-height:1.5}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px;padding-block:28px 48px;display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:flex-end;background:var(--band);color:var(--band-ink);padding:22px 24px;border-bottom:3px solid var(--brand-on-band)}
+.logo{height:60px;width:auto;max-width:100%;display:block;margin:-6px 0 10px -10px}
+header .lede{color:#B9C3C5}
+header .stamp{color:#94A3A6}
+header .stamp b{color:#fff}
+header a{color:var(--brand-on-band);text-decoration:none}
+header a:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-on-band);font-weight:600}
+h1{font-size:clamp(32px,5.5vw,50px);line-height:1.05;margin:6px 0 8px;font-weight:700;letter-spacing:-.025em;text-wrap:balance}
+h1 em{font-style:normal;font-weight:700;color:var(--brand-on-band)}
+.lede{color:var(--muted);max-width:60ch;margin:0}
+.stamp{font-family:var(--f-mono);font-size:12px;color:var(--muted);text-align:right;display:flex;flex-direction:column;gap:2px}
+.stamp b{color:var(--ink);font-weight:500}
+.live{display:inline-flex;align-items:center;gap:6px}
+.live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--up)}
+h2{font-size:20px;margin:0;font-weight:600}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:14px}
+.note{font-size:13px;color:var(--muted);margin:0}
+.seg{display:inline-flex;border:1px solid var(--line);background:var(--surface)}
+.seg button{font:inherit;font-size:13px;padding:6px 14px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.seg button:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.kpi{background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.kpi .l{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.kpi .v{font-family:var(--f-mono);font-size:24px;font-weight:500;font-variant-numeric:tabular-nums}
+.kpi .s{font-size:12px;color:var(--muted)}
+.kpi.lead .v{color:var(--teal);font-size:30px}
+.up{color:var(--up)} .down{color:var(--down)}
+.chartbox{background:var(--surface);border:1px solid var(--line);padding:16px 12px 8px}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;padding:0 6px 8px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:18px;height:3px;display:inline-block}
+svg text{font-family:var(--f-mono);font-size:11px;fill:var(--muted)}
+.tip{font-family:var(--f-mono);font-size:12px}
+.tbl{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--chip)}
+td.n,th.n{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:3px;background:var(--chip);color:var(--ink);white-space:nowrap}
+.chip.sector{background:color-mix(in srgb,var(--brand) 22%,transparent)}
+.chip.core{background:color-mix(in srgb,var(--gold) 22%,transparent)}
+.fund{font-weight:500}
+.sub{font-size:12px;color:var(--muted)}
+details summary{cursor:pointer;color:var(--teal);font-size:13px}
+details summary:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+details ul{margin:6px 0 0;padding-left:18px;font-size:13px}
+.bar{height:6px;background:var(--chip);position:relative;min-width:80px}
+.bar b{position:absolute;left:0;top:0;bottom:0;background:var(--grey)}
+.bar b.on{background:var(--brand)}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.rules div{border-top:2px solid var(--brand);padding-top:10px}
+.rules h3{font-size:14px;margin:0 0 4px}
+.rules p{margin:0;font-size:13px;color:var(--muted)}
+.two{display:grid;grid-template-columns:minmax(0,1fr);gap:36px}
+footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:8px}
+footer p{margin:0;max-width:95ch}
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <a href="https://pickmyfund.com" target="_blank" rel="noopener"><svg class="logo" viewBox="0 0 616 160" role="img" aria-label="pickmyfund.com" xmlns="http://www.w3.org/2000/svg"><g transform="translate(24,14)"><path d="M14 22 C14 12 22 6 31 11 L110 55 C119 60 119 72 110 77 L31 121 C22 126 14 120 14 110 Z" fill="none" stroke="#C9A44C" stroke-width="8" stroke-linejoin="round"/><rect x="27" y="74" width="12" height="18" rx="2" fill="#C9A44C"/><rect x="45" y="61" width="12" height="31" rx="2" fill="#C9A44C"/><rect x="63" y="48" width="12" height="44" rx="2" fill="#C9A44C"/></g><text x="182" y="95" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="56" letter-spacing="-0.5" fill="#FFFFFF" style="fill:#FFFFFF;font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-size:56px">pick<tspan fill="#C9A44C" style="fill:#C9A44C">my</tspan>fund</text><text x="514" y="95" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="30" style="fill:#94A3A6;font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-size:30px">.com</text></svg></a>
+      <div class="eyebrow">Mutual Fund Model · Simple. Clear. Invested.</div>
+      <h1>Select <em>5</em></h1>
+      <p class="lede">Two funds in India's strongest sectors and three steady core funds, reviewed every quarter.</p>
+    </div>
+    <div class="stamp">
+      <span class="live">NAVs to <b id="navdate"></b></span>
+      <span>Updated <span id="updated"></span></span>
+      <a href="https://pickmyfund.com" target="_blank" rel="noopener">pickmyfund.com</a>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head"><h2>Performance</h2><div class="seg" role="group" aria-label="Period"><button type="button" id="p1" data-p="1" aria-pressed="false">1 year</button><button type="button" id="p3" data-p="3" aria-pressed="true">3 years</button></div></div>
+    <p class="note" id="since" style="margin:-6px 0 12px"></p>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Growth of ₹100</h2><p class="note">Regular-plan NAVs, after expense ratios and exit loads, before tax</p></div>
+    <div class="chartbox">
+      <div class="legend">
+        <span><i style="background:var(--teal)"></i>PickMyFund Select 5</span>
+        <span><i style="background:var(--gold)"></i>Nifty 500 index fund</span>
+        <span><i style="background:var(--grey)"></i>Nifty 50 index fund</span>
+        <span class="tip" id="tip"></span>
+      </div>
+      <svg id="chart" viewBox="0 0 1000 340" width="100%" role="img" aria-label="Growth of 100 rupees: PickMyFund Select 5 against Nifty 500 and Nifty 50 index funds"></svg>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Year by year</h2><p class="note">Calendar-year returns</p></div>
+    <div class="tbl"><table id="ytbl"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Quarter by quarter</h2><p class="note">Sectors and funds held each quarter</p></div>
+    <div class="tbl"><table id="qtbl"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Model book now</h2><p class="note">Held since the latest quarterly review; weights drift until the next one</p></div>
+    <div class="tbl"><table id="htbl"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Starting today</h2><p class="note">New money is invested in this five; it differs from the model book because existing holdings are kept while they stay in their group's top 3</p></div>
+    <div class="tbl"><table id="ftbl"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Sector strength</h2><p class="note" id="sectnote"></p></div>
+    <div class="tbl"><table id="stbl"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>How it works</h2></div>
+    <div class="rules">
+      <div><h3>Sector slots · 40%</h3><p>Sector fund groups are ranked by their average 6-month return. The top two go in; a sector stays while it ranks in the top five.</p></div>
+      <div><h3>Core slots · 60%</h3><p>The three steadiest diversified funds across large, flexi, mid and small cap, one per segment, ranked by 1-year return relative to volatility.</p></div>
+      <div><h3>Fund choice</h3><p>Funds above ₹500 cr with a one-year record. A held fund stays while it is in the top three of its group. One fund per fund house.</p></div>
+      <div><h3>Review</h3><p>First week of January, April, July and October. Swaps follow the rules, then all five reset to 20%.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Returns from <span id="fstart"></span> to 8 Oct 2026 are reconstructed by applying the model's rules to historical NAVs; they are not returns earned by a client account. From 8 Oct 2026 the page tracks the model live from published NAVs. Data: AMFI NAVs via mfapi.in; fund size, expense ratio and sector groups from NGEN Markets.</p>
+    <p>This document is prepared solely for educational and informational purposes. It does not constitute an offer, solicitation, or recommendation to buy, sell, or invest in any security, mutual fund, or financial product. Past performance is not indicative of future results. Please consult a qualified financial advisor before making any investment decisions.</p>
+    <p>PickMyFund · <a href="https://pickmyfund.com" target="_blank" rel="noopener" style="color:inherit">pickmyfund.com</a> · Simple. Clear. Invested. A platform of Agreesha Wealth Finserv LLP · AMFI-registered Mutual Fund Distributor · ARN 271476</p>
+  </footer>
+</div>
+
+<script>
+const D=/*__DATA__*/null;
+if(!D){document.querySelector('.wrap').innerHTML='<header><div><div class="eyebrow">PickMyFund Select 5</div><h1>Template file</h1><p class="lede">This is the page template without data. The live page is generated from it by gen_dash.py, which fills in the latest NAVs.</p></div></header>';}
+else{
+const pct=(x,d=1)=>x==null?'–':(x>0?'+':'')+(x*100).toFixed(d)+'%';
+const cls=x=>x>0?'up':(x<0?'down':'');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const tc=n=>n===n.toUpperCase()?n.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()):n;
+const clean=n=>tc(n).replace(/\s*-\s*(Regular Plan|Regular)\s*-?\s*Growth.*$/i,'').replace(/\s*-\s*Growth.*$/i,'').replace(/\s*\(G\)\s*$/,'').replace(/ - Regular Plan.*$/i,'');
+const fmtQ=s=>{const d=new Date(s);return d.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})};
+document.getElementById('navdate').textContent=D.navdate;
+document.getElementById('updated').textContent=D.updated;
+document.getElementById('fstart').textContent=D.start;
+const S0=D.series,K=D.k;
+function winIdx(years){const last=new Date(S0.dates[S0.dates.length-1]);const t=new Date(last);t.setFullYear(t.getFullYear()-years);const i=S0.dates.findIndex(d=>new Date(d)>=t);return Math.max(0,i)}
+function st(arr,i0){const a=arr.slice(i0).filter(v=>v!=null);const tot=a[a.length-1]/a[0]-1;let pk=a[0],dd=0;for(const v of a){pk=Math.max(pk,v);dd=Math.min(dd,v/pk-1)}const days=(new Date(S0.dates[S0.dates.length-1])-new Date(S0.dates[i0]))/864e5;return{tot,dd,cagr:Math.pow(1+tot,365.25/days)-1,yrs:days/365.25}}
+function render(years){
+ document.querySelectorAll('.seg button').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.p===years)));
+ const i0=years===3?0:winIdx(1);
+ const m=st(S0.model,i0),f5=st(S0.n500,i0),f50=st(S0.n50,i0),long=m.yrs>1.5;
+ document.getElementById('since').textContent='From '+fmtQ(S0.dates[i0])+' to '+D.navdate+(long?' · annualised figures shown below each total':'');
+ const sub=x=>long?pct(x.cagr)+' a year · max fall '+pct(x.dd):'Max fall '+pct(x.dd);
+ const kp=[['Select 5',pct(m.tot),sub(m),'lead'],['Nifty 500 fund',pct(f5.tot),sub(f5)],['Nifty 50 fund',pct(f50.tot),sub(f50)],
+  ['Lead over Nifty 500',((m.tot-f5.tot)>0?'+':'')+((m.tot-f5.tot)*100).toFixed(1)+' pts',long?(((m.cagr-f5.cagr)>0?'+':'')+((m.cagr-f5.cagr)*100).toFixed(1))+' pts a year':'versus the index fund'],
+  ['This quarter',pct(K.qtd,2),'since last review'],['Last NAV day',pct(K.day,2),D.navdate]];
+ document.getElementById('kpis').innerHTML=kp.map(([l,v,s,c])=>`<div class="kpi ${c||''}"><span class="l">${l}</span><span class="v ${c?'':cls(parseFloat(v))}">${v}</span><span class="s">${s}</span></div>`).join('');
+ chart(i0);
+}
+function chart(i0){
+ const rb=a=>{const b=a[i0];return a.slice(i0).map(v=>v==null?null:v/b*100)};
+ const S={dates:S0.dates.slice(i0),model:rb(S0.model),n50:rb(S0.n50),n500:rb(S0.n500)};
+ const svg=document.getElementById('chart'),W=1000,H=340,L=48,R=16,T=12,B=30;
+ const all=[...S.model,...S.n50,...S.n500].filter(v=>v!=null);
+ const span=Math.max(...all)-Math.min(...all),step=span>60?20:(span>30?10:5);
+ let lo=Math.floor(Math.min(...all)/step)*step,hi=Math.ceil(Math.max(...all)/step)*step;
+ const n=S.dates.length,x=i=>L+(W-L-R)*i/(n-1),y=v=>T+(H-T-B)*(hi-v)/(hi-lo);
+ let g='';
+ for(let v=lo;v<=hi;v+=step){g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width="1"/><text x="${L-8}" y="${y(v)+4}" text-anchor="end">${v}</text>`}
+ g+=`<line x1="${L}" x2="${W-R}" y1="${y(100)}" y2="${y(100)}" stroke="var(--muted)" stroke-dasharray="3 3" stroke-width="1"/>`;
+ const long=n>400;let lastM='';
+ S.dates.forEach((d,i)=>{const m=d.slice(0,7),mo=+d.slice(5,7);if(m!==lastM){lastM=m;if(long?(mo===1||mo===7):true){const dt=new Date(d);const lab=long?(mo===1?String(dt.getFullYear()):'Jul'):dt.toLocaleDateString('en-IN',{month:'short'})+(mo===1?" '"+String(dt.getFullYear()).slice(2):'');if(i>3)g+=`<text x="${x(i)}" y="${H-8}" text-anchor="middle">${lab}</text>`}}});
+ D.quarters.forEach(q=>{const i=S.dates.findIndex(d=>d>=q.q);if(i>0)g+=`<line x1="${x(i)}" x2="${x(i)}" y1="${T}" y2="${H-B}" stroke="var(--brand)" stroke-opacity=".35" stroke-dasharray="2 4"/>`});
+ const line=(arr,col,w)=>{let p='';arr.forEach((v,i)=>{if(v!=null)p+=(p?'L':'M')+x(i).toFixed(1)+' '+y(v).toFixed(1)});return `<path d="${p}" fill="none" stroke="${col}" stroke-width="${w}" stroke-linejoin="round"/>`};
+ let area='M'+x(0)+' '+y(lo);S.model.forEach((v,i)=>area+='L'+x(i).toFixed(1)+' '+y(v).toFixed(1));area+='L'+x(n-1)+' '+y(lo)+'Z';
+ g+=`<path d="${area}" fill="var(--teal)" fill-opacity=".08"/>`;
+ g+=line(S.n50,'var(--grey)',1.6)+line(S.n500,'var(--gold)',1.8)+line(S.model,'var(--teal)',2.6);
+ const e=n-1;g+=`<circle cx="${x(e)}" cy="${y(S.model[e])}" r="4" fill="var(--teal)"/><text x="${x(e)-8}" y="${y(S.model[e])-14}" text-anchor="end" style="fill:var(--teal);font-weight:500;paint-order:stroke;stroke:var(--surface);stroke-width:4px">${S.model[e].toFixed(1)}</text>`;
+ g+=`<line id="hx" x1="0" x2="0" y1="${T}" y2="${H-B}" stroke="var(--ink)" stroke-opacity=".35" visibility="hidden"/><rect x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}" fill="transparent" id="hit"/>`;
+ svg.innerHTML=g;
+ const tip=document.getElementById('tip'),hx=document.getElementById('hx');
+ const show=ev=>{const r=svg.getBoundingClientRect(),px=(ev.clientX-r.left)*W/r.width;let i=Math.round((px-L)/(W-L-R)*(n-1));i=Math.max(0,Math.min(n-1,i));hx.setAttribute('x1',x(i));hx.setAttribute('x2',x(i));hx.setAttribute('visibility','visible');
+  tip.textContent=`${fmtQ(S.dates[i])} · Model ${S.model[i].toFixed(1)} · N500 ${S.n500[i]!=null?S.n500[i].toFixed(1):'–'} · N50 ${S.n50[i]!=null?S.n50[i].toFixed(1):'–'}`};
+ const hit=document.getElementById('hit');hit.addEventListener('pointermove',show);hit.addEventListener('pointerleave',()=>{hx.setAttribute('visibility','hidden');tip.textContent=''});
+}
+let P=3;try{const v=localStorage.getItem('pmf5_period');if(v==='1')P=1}catch(e){}
+document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{P=+b.dataset.p;try{localStorage.setItem('pmf5_period',String(P))}catch(e){}render(P)}));
+render(P);
+
+// calendar years
+(function(){const yrs={};S0.dates.forEach((d,i)=>{const y=d.slice(0,4);(yrs[y]=yrs[y]||[]).push(i)});
+ const ys=Object.keys(yrs).sort();let rows='';
+ ys.forEach((y,k)=>{const idx=yrs[y];const i0=k===0?idx[0]:yrs[ys[k-1]].slice(-1)[0],i1=idx[idx.length-1];
+  const r=a=>a[i1]/a[i0]-1;const part=(k===0)?' <span class="sub">from '+fmtQ(S0.dates[i0])+'</span>':(k===ys.length-1?' <span class="sub">to date</span>':'');
+  const m=r(S0.model),f=r(S0.n500),g=r(S0.n50);
+  rows=`<tr><td>${y}${part}</td><td class="n ${cls(m)}"><b>${pct(m)}</b></td><td class="n ${cls(f)}">${pct(f)}</td><td class="n ${cls(g)}">${pct(g)}</td><td class="n ${cls(m-f)}">${((m-f)>0?'+':'')+((m-f)*100).toFixed(1)} pts</td></tr>`+rows});
+ document.getElementById('ytbl').innerHTML='<tr><th>Year</th><th class="n">Select 5</th><th class="n">Nifty 500</th><th class="n">Nifty 50</th><th class="n">Lead over Nifty 500</th></tr>'+rows;})();
+
+// quarters
+document.getElementById('qtbl').innerHTML='<tr><th>Review</th><th>Sectors held</th><th class="n">Model</th><th class="n">Nifty 500</th><th class="n">Nifty 50</th><th>Funds</th></tr>'+
+ [...D.quarters].reverse().map((q,i)=>`<tr><td>${fmtQ(q.q)}${i===0?' <span class="chip">current</span>':''}</td><td>${q.sectors.map(s=>`<span class="chip sector">${esc(s)}</span>`).join(' ')}</td>
+ <td class="n ${cls(q.ret)}"><b>${pct(q.ret)}</b></td><td class="n ${cls(q.n500)}">${pct(q.n500)}</td><td class="n ${cls(q.n50)}">${pct(q.n50)}</td>
+ <td><details><summary>5 funds</summary><ul>${q.funds.map(f=>`<li>${esc(clean(D.names[f.code]||f.name))} <span class="sub">${pct(q.fund_ret[f.code])}</span></li>`).join('')}</ul></details></td></tr>`).join('');
+
+// holdings
+document.getElementById('htbl').innerHTML='<tr><th>Fund</th><th>Slot</th><th class="n">NAV</th><th class="n">Day</th><th class="n">Since review</th><th class="n">Weight</th></tr>'+
+ D.hold.map(h=>`<tr><td class="fund">${esc(clean(h.name))}</td><td><span class="chip ${h.role.toLowerCase()}">${h.role} · ${esc(h.theme)}</span></td><td class="n">${h.nav.toFixed(2)}<div class="sub">${h.navdate}</div></td><td class="n ${cls(h.d1)}">${pct(h.d1,2)}</td><td class="n ${cls(h.qtd)}">${pct(h.qtd,2)}</td><td class="n">${(h.w*100).toFixed(1)}%</td></tr>`).join('');
+
+// fresh
+document.getElementById('ftbl').innerHTML='<tr><th>Fund</th><th>Slot</th><th class="n">Fund size</th><th class="n">Expense ratio</th><th class="n">NAV</th><th class="n">Day</th><th class="n">1 year</th><th class="n">Weight</th></tr>'+
+ D.fresh.map(f=>`<tr><td class="fund">${esc(clean(f.name))}</td><td><span class="chip ${f.role.toLowerCase()}">${f.role} · ${esc(f.group)}</span></td><td class="n">₹${Math.round(f.aum).toLocaleString('en-IN')} cr</td><td class="n">${(f.ter*100).toFixed(2)}%</td><td class="n">${f.nav.toFixed(2)}<div class="sub">${f.navdate}</div></td><td class="n ${cls(f.d1)}">${pct(f.d1,2)}</td><td class="n ${cls(f.y1)}">${pct(f.y1)}</td><td class="n">20%</td></tr>`).join('');
+
+// sectors
+document.getElementById('sectnote').textContent='Average return of each sector fund group · NGEN data '+D.sect_asof;
+const mx=Math.max(...D.sectors.map(s=>Math.abs(s.r6)));
+document.getElementById('stbl').innerHTML='<tr><th class="n">#</th><th>Sector</th><th class="n">3 months</th><th class="n">6 months</th><th style="width:22%"></th><th class="n">1 year</th><th class="n">Funds</th></tr>'+
+ D.sectors.map((s,i)=>`<tr><td class="n">${i+1}</td><td>${esc(s.sector)} ${s.chosen?'<span class="chip sector">held</span>':(i<5?'<span class="chip">watch</span>':'')}</td><td class="n ${cls(s.r3)}">${pct(s.r3)}</td><td class="n ${cls(s.r6)}"><b>${pct(s.r6)}</b></td><td><div class="bar"><b class="${s.chosen?'on':''}" style="width:${Math.max(0,s.r6)/mx*100}%"></b></div></td><td class="n ${cls(s.r1y)}">${pct(s.r1y)}</td><td class="n">${s.n}</td></tr>`).join('');
+}
+</script>

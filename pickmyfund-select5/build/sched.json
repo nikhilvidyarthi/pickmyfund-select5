@@ -1,0 +1,522 @@
+[
+ {
+  "date": "2023-10-06",
+  "signal_date": "2023-09-29",
+  "sectors": [
+   "PSU",
+   "Healthcare"
+  ],
+  "funds": [
+   {
+    "code": 150538,
+    "name": "ICICI PRUDENTIAL PSU EQUITY FUND",
+    "theme": "PSU",
+    "role": "Sector"
+   },
+   {
+    "code": 102823,
+    "name": "SBI HEALTHCARE OPPORTUNITIES FUND",
+    "theme": "Healthcare",
+    "role": "Sector"
+   },
+   {
+    "code": 100254,
+    "name": "JM Value Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 147701,
+    "name": "Motilal Oswal Large and Midcap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   },
+   {
+    "code": 130502,
+    "name": "HDFC Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2024-01-05",
+  "signal_date": "2023-12-29",
+  "sectors": [
+   "PSU",
+   "Healthcare"
+  ],
+  "funds": [
+   {
+    "code": 150538,
+    "name": "ICICI PRUDENTIAL PSU EQUITY FUND",
+    "theme": "PSU",
+    "role": "Sector"
+   },
+   {
+    "code": 102823,
+    "name": "SBI HEALTHCARE OPPORTUNITIES FUND",
+    "theme": "Healthcare",
+    "role": "Sector"
+   },
+   {
+    "code": 100254,
+    "name": "JM Value Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 130502,
+    "name": "HDFC Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   },
+   {
+    "code": 100377,
+    "name": "Nippon India Growth Mid Cap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2024-04-05",
+  "signal_date": "2024-03-29",
+  "sectors": [
+   "PSU",
+   "Healthcare"
+  ],
+  "funds": [
+   {
+    "code": 150538,
+    "name": "ICICI PRUDENTIAL PSU EQUITY FUND",
+    "theme": "PSU",
+    "role": "Sector"
+   },
+   {
+    "code": 102823,
+    "name": "SBI HEALTHCARE OPPORTUNITIES FUND",
+    "theme": "Healthcare",
+    "role": "Sector"
+   },
+   {
+    "code": 147944,
+    "name": "BANDHAN Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   },
+   {
+    "code": 149182,
+    "name": "Kotak Multi Cap Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 105758,
+    "name": "HDFC Mid Cap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2024-07-05",
+  "signal_date": "2024-06-28",
+  "sectors": [
+   "PSU",
+   "Defence"
+  ],
+  "funds": [
+   {
+    "code": 150538,
+    "name": "ICICI PRUDENTIAL PSU EQUITY FUND",
+    "theme": "PSU",
+    "role": "Sector"
+   },
+   {
+    "code": 151751,
+    "name": "HDFC Defence Fund",
+    "theme": "Defence",
+    "role": "Sector"
+   },
+   {
+    "code": 147944,
+    "name": "BANDHAN Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   },
+   {
+    "code": 149182,
+    "name": "Kotak Multi Cap Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 106144,
+    "name": "Invesco India Large & Mid Cap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2024-10-04",
+  "signal_date": "2024-09-27",
+  "sectors": [
+   "Defence",
+   "Auto"
+  ],
+  "funds": [
+   {
+    "code": 151751,
+    "name": "HDFC Defence Fund",
+    "theme": "Defence",
+    "role": "Sector"
+   },
+   {
+    "code": 150645,
+    "name": "ICICI Prudential Nifty Auto Index Fund",
+    "theme": "Auto",
+    "role": "Sector"
+   },
+   {
+    "code": 106144,
+    "name": "Invesco India Large & Mid Cap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   },
+   {
+    "code": 129048,
+    "name": "Motilal Oswal Flexi Cap Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 146380,
+    "name": "DSP Nifty Next 50 Index Fund",
+    "theme": "Large cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2025-01-03",
+  "signal_date": "2024-12-27",
+  "sectors": [
+   "Healthcare",
+   "Tech"
+  ],
+  "funds": [
+   {
+    "code": 152084,
+    "name": "HDFC Pharma and Healthcare Fund",
+    "theme": "Healthcare",
+    "role": "Sector"
+   },
+   {
+    "code": 120577,
+    "name": "SBI TECHNOLOGY OPPORTUNITIES FUND",
+    "theme": "Tech",
+    "role": "Sector"
+   },
+   {
+    "code": 106144,
+    "name": "Invesco India Large & Mid Cap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   },
+   {
+    "code": 129048,
+    "name": "Motilal Oswal Flexi Cap Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 147944,
+    "name": "BANDHAN Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2025-04-04",
+  "signal_date": "2025-03-28",
+  "sectors": [
+   "Healthcare",
+   "Tech"
+  ],
+  "funds": [
+   {
+    "code": 152084,
+    "name": "HDFC Pharma and Healthcare Fund",
+    "theme": "Healthcare",
+    "role": "Sector"
+   },
+   {
+    "code": 120577,
+    "name": "SBI TECHNOLOGY OPPORTUNITIES FUND",
+    "theme": "Tech",
+    "role": "Sector"
+   },
+   {
+    "code": 129048,
+    "name": "Motilal Oswal Flexi Cap Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 147944,
+    "name": "BANDHAN Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   },
+   {
+    "code": 101635,
+    "name": "DSP Large Cap Fund",
+    "theme": "Large cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2025-07-04",
+  "signal_date": "2025-06-27",
+  "sectors": [
+   "Defence",
+   "Financials"
+  ],
+  "funds": [
+   {
+    "code": 151751,
+    "name": "HDFC Defence Fund",
+    "theme": "Defence",
+    "role": "Sector"
+   },
+   {
+    "code": 152208,
+    "name": "DSP Banking & Financial Services Fund",
+    "theme": "Financials",
+    "role": "Sector"
+   },
+   {
+    "code": 129048,
+    "name": "Motilal Oswal Flexi Cap Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 147944,
+    "name": "BANDHAN Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   },
+   {
+    "code": 105503,
+    "name": "Invesco India Mid Cap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2025-10-03",
+  "signal_date": "2025-09-26",
+  "sectors": [
+   "Defence",
+   "Auto"
+  ],
+  "funds": [
+   {
+    "code": 151751,
+    "name": "HDFC Defence Fund",
+    "theme": "Defence",
+    "role": "Sector"
+   },
+   {
+    "code": 150645,
+    "name": "ICICI Prudential Nifty Auto Index Fund",
+    "theme": "Auto",
+    "role": "Sector"
+   },
+   {
+    "code": 105503,
+    "name": "Invesco India Mid Cap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   },
+   {
+    "code": 122640,
+    "name": "Parag Parikh Flexi Cap Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 152232,
+    "name": "Motilal Oswal Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2026-01-02",
+  "signal_date": "2025-12-26",
+  "sectors": [
+   "Auto",
+   "MNC"
+  ],
+  "funds": [
+   {
+    "code": 150645,
+    "name": "ICICI Prudential Nifty Auto Index Fund",
+    "theme": "Auto",
+    "role": "Sector"
+   },
+   {
+    "code": 152913,
+    "name": "Kotak MNC Fund",
+    "theme": "MNC",
+    "role": "Sector"
+   },
+   {
+    "code": 122640,
+    "name": "Parag Parikh Flexi Cap Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 100822,
+    "name": "UTI Nifty 50 Index Fund",
+    "theme": "Large cap",
+    "role": "Core"
+   },
+   {
+    "code": 103024,
+    "name": "SBI LARGE & MIDCAP FUND",
+    "theme": "Mid cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2026-04-03",
+  "signal_date": "2026-03-27",
+  "sectors": [
+   "Healthcare",
+   "PSU"
+  ],
+  "funds": [
+   {
+    "code": 152084,
+    "name": "HDFC Pharma and Healthcare Fund",
+    "theme": "Healthcare",
+    "role": "Sector"
+   },
+   {
+    "code": 113099,
+    "name": "SBI PSU FUND",
+    "theme": "PSU",
+    "role": "Sector"
+   },
+   {
+    "code": 152934,
+    "name": "ICICI Prudential Nifty200 Value 30 Index Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 151034,
+    "name": "HSBC Midcap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   },
+   {
+    "code": 129647,
+    "name": "Union Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2026-07-03",
+  "signal_date": "2026-06-26",
+  "sectors": [
+   "Healthcare",
+   "Defence"
+  ],
+  "funds": [
+   {
+    "code": 152084,
+    "name": "HDFC Pharma and Healthcare Fund",
+    "theme": "Healthcare",
+    "role": "Sector"
+   },
+   {
+    "code": 152711,
+    "name": "Motilal Oswal Nifty India Defence Index Fund",
+    "theme": "Defence",
+    "role": "Sector"
+   },
+   {
+    "code": 152934,
+    "name": "ICICI Prudential Nifty200 Value 30 Index Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 151034,
+    "name": "HSBC Midcap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   },
+   {
+    "code": 129647,
+    "name": "Union Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2026-10-02",
+  "signal_date": "2026-09-25",
+  "sectors": [
+   "Healthcare",
+   "Defence"
+  ],
+  "funds": [
+   {
+    "code": 152084,
+    "name": "HDFC Pharma and Healthcare Fund",
+    "theme": "Healthcare",
+    "role": "Sector"
+   },
+   {
+    "code": 152711,
+    "name": "Motilal Oswal Nifty India Defence Index Fund",
+    "theme": "Defence",
+    "role": "Sector"
+   },
+   {
+    "code": 151034,
+    "name": "HSBC Midcap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   },
+   {
+    "code": 129647,
+    "name": "Union Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   },
+   {
+    "code": 152016,
+    "name": "LIC MF Value Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   }
+  ]
+ }
+]
