@@ -1,0 +1,44 @@
+name: Refresh Select 5 dashboard
+
+on:
+  schedule:
+    # 07:30 IST, Tuesday–Saturday (after the previous day's NAVs are published)
+    - cron: "0 2 * * 2-6"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pandas numpy
+
+      - name: Build page with latest NAVs
+        run: |
+          python build/gen_dash.py build
+          cp build/netlify/index.html public/index.html
+
+      - name: Commit if changed
+        run: |
+          git config user.name "select5-bot"
+          git config user.email "select5-bot@users.noreply.github.com"
+          git add public/index.html
+          if git diff --cached --quiet; then
+            echo "No change"
+          else
+            git commit -m "Refresh NAVs $(date -u +'%Y-%m-%d')"
+            git push
+          fi
