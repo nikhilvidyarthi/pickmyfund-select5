@@ -13,6 +13,10 @@ concurrency:
   group: refresh
   cancel-in-progress: false
 
+defaults:
+  run:
+    working-directory: pickmyfund-select5
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
