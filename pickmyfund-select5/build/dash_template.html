@@ -87,7 +87,7 @@ footer p{margin:0;max-width:95ch}
       <a href="https://pickmyfund.com" target="_blank" rel="noopener"><svg class="logo" viewBox="0 0 616 160" role="img" aria-label="pickmyfund.com" xmlns="http://www.w3.org/2000/svg"><g transform="translate(24,14)"><path d="M14 22 C14 12 22 6 31 11 L110 55 C119 60 119 72 110 77 L31 121 C22 126 14 120 14 110 Z" fill="none" stroke="#C9A44C" stroke-width="8" stroke-linejoin="round"/><rect x="27" y="74" width="12" height="18" rx="2" fill="#C9A44C"/><rect x="45" y="61" width="12" height="31" rx="2" fill="#C9A44C"/><rect x="63" y="48" width="12" height="44" rx="2" fill="#C9A44C"/></g><text x="182" y="95" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="56" letter-spacing="-0.5" fill="#FFFFFF" style="fill:#FFFFFF;font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-size:56px">pick<tspan fill="#C9A44C" style="fill:#C9A44C">my</tspan>fund</text><text x="514" y="95" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="30" style="fill:#94A3A6;font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-size:30px">.com</text></svg></a>
       <div class="eyebrow">Mutual Fund Model · Simple. Clear. Invested.</div>
       <h1>Select <em>5</em></h1>
-      <p class="lede">Two funds in India's strongest sectors and three steady core funds, reviewed every quarter.</p>
+      <p class="lede">Two funds in the strongest sectors, with gold and silver competing for those slots, plus three steady core funds. Reviewed every quarter.</p>
     </div>
     <div class="stamp">
       <span class="live">NAVs to <b id="navdate"></b></span>
@@ -136,17 +136,17 @@ footer p{margin:0;max-width:95ch}
   </section>
 
   <section>
-    <div class="sec-head"><h2>Sector strength</h2><p class="note" id="sectnote"></p></div>
+    <div class="sec-head"><h2>Sector &amp; metals strength</h2><p class="note" id="sectnote"></p></div>
     <div class="tbl"><table id="stbl"></table></div>
   </section>
 
   <section>
     <div class="sec-head"><h2>How it works</h2></div>
     <div class="rules">
-      <div><h3>Sector slots · 40%</h3><p>Sector fund groups are ranked by their average 6-month return. The top two go in; a sector stays while it ranks in the top five.</p></div>
+      <div><h3>Sector &amp; metals slots · 40%</h3><p>Sector fund groups, gold funds and silver funds are ranked together by average 6-month return. The top two go in; a holding stays while it ranks in the top five.</p></div>
       <div><h3>Core slots · 60%</h3><p>The three steadiest diversified funds across large, flexi, mid and small cap, one per segment, ranked by 1-year return relative to volatility.</p></div>
       <div><h3>Fund choice</h3><p>Funds above ₹500 cr with a one-year record. A held fund stays while it is in the top three of its group. One fund per fund house.</p></div>
-      <div><h3>Review</h3><p>First week of January, April, July and October. Swaps follow the rules, then all five reset to 20%.</p></div>
+      <div><h3>Review &amp; new money</h3><p>First week of January, April, July and October; swaps follow the rules, then all five reset to 20%. New money waits in an arbitrage fund and moves in over three months.</p></div>
     </div>
   </section>
 
@@ -239,7 +239,7 @@ document.getElementById('ftbl').innerHTML='<tr><th>Fund</th><th>Slot</th><th cla
  D.fresh.map(f=>`<tr><td class="fund">${esc(clean(f.name))}</td><td><span class="chip ${f.role.toLowerCase()}">${f.role} · ${esc(f.group)}</span></td><td class="n">₹${Math.round(f.aum).toLocaleString('en-IN')} cr</td><td class="n">${(f.ter*100).toFixed(2)}%</td><td class="n">${f.nav.toFixed(2)}<div class="sub">${f.navdate}</div></td><td class="n ${cls(f.d1)}">${pct(f.d1,2)}</td><td class="n ${cls(f.y1)}">${pct(f.y1)}</td><td class="n">20%</td></tr>`).join('');
 
 // sectors
-document.getElementById('sectnote').textContent='Average return of each sector fund group · NGEN data '+D.sect_asof;
+document.getElementById('sectnote').textContent='Average return of each sector, gold and silver fund group · NGEN data '+D.sect_asof;
 const mx=Math.max(...D.sectors.map(s=>Math.abs(s.r6)));
 document.getElementById('stbl').innerHTML='<tr><th class="n">#</th><th>Sector</th><th class="n">3 months</th><th class="n">6 months</th><th style="width:22%"></th><th class="n">1 year</th><th class="n">Funds</th></tr>'+
  D.sectors.map((s,i)=>`<tr><td class="n">${i+1}</td><td>${esc(s.sector)} ${s.chosen?'<span class="chip sector">held</span>':(i<5?'<span class="chip">watch</span>':'')}</td><td class="n ${cls(s.r3)}">${pct(s.r3)}</td><td class="n ${cls(s.r6)}"><b>${pct(s.r6)}</b></td><td><div class="bar"><b class="${s.chosen?'on':''}" style="width:${Math.max(0,s.r6)/mx*100}%"></b></div></td><td class="n ${cls(s.r1y)}">${pct(s.r1y)}</td><td class="n">${s.n}</td></tr>`).join('');

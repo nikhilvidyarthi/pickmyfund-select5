@@ -244,7 +244,7 @@
   "signal_date": "2025-03-28",
   "sectors": [
    "Healthcare",
-   "Tech"
+   "Gold"
   ],
   "funds": [
    {
@@ -254,9 +254,9 @@
     "role": "Sector"
    },
    {
-    "code": 120577,
-    "name": "SBI TECHNOLOGY OPPORTUNITIES FUND",
-    "theme": "Tech",
+    "code": 115676,
+    "name": "SBI GOLD FUND - Regular Plan - Growth",
+    "theme": "Gold",
     "role": "Sector"
    },
    {
@@ -283,20 +283,20 @@
   "date": "2025-07-04",
   "signal_date": "2025-06-27",
   "sectors": [
-   "Defence",
-   "Financials"
+   "Gold",
+   "Defence"
   ],
   "funds": [
+   {
+    "code": 115676,
+    "name": "SBI GOLD FUND - Regular Plan - Growth",
+    "theme": "Gold",
+    "role": "Sector"
+   },
    {
     "code": 151751,
     "name": "HDFC Defence Fund",
     "theme": "Defence",
-    "role": "Sector"
-   },
-   {
-    "code": 152208,
-    "name": "DSP Banking & Financial Services Fund",
-    "theme": "Financials",
     "role": "Sector"
    },
    {
@@ -312,9 +312,9 @@
     "role": "Core"
    },
    {
-    "code": 105503,
-    "name": "Invesco India Mid Cap Fund",
-    "theme": "Mid cap",
+    "code": 101635,
+    "name": "DSP Large Cap Fund",
+    "theme": "Large cap",
     "role": "Core"
    }
   ]
@@ -323,10 +323,16 @@
   "date": "2025-10-03",
   "signal_date": "2025-09-26",
   "sectors": [
-   "Defence",
-   "Auto"
+   "Gold",
+   "Defence"
   ],
   "funds": [
+   {
+    "code": 115676,
+    "name": "SBI GOLD FUND - Regular Plan - Growth",
+    "theme": "Gold",
+    "role": "Sector"
+   },
    {
     "code": 151751,
     "name": "HDFC Defence Fund",
@@ -334,21 +340,15 @@
     "role": "Sector"
    },
    {
-    "code": 150645,
-    "name": "ICICI Prudential Nifty Auto Index Fund",
-    "theme": "Auto",
-    "role": "Sector"
+    "code": 122640,
+    "name": "Parag Parikh Flexi Cap Fund",
+    "theme": "Diversified",
+    "role": "Core"
    },
    {
     "code": 105503,
     "name": "Invesco India Mid Cap Fund",
     "theme": "Mid cap",
-    "role": "Core"
-   },
-   {
-    "code": 122640,
-    "name": "Parag Parikh Flexi Cap Fund",
-    "theme": "Diversified",
     "role": "Core"
    },
    {
@@ -363,20 +363,20 @@
   "date": "2026-01-02",
   "signal_date": "2025-12-26",
   "sectors": [
-   "Auto",
-   "MNC"
+   "Gold",
+   "Silver"
   ],
   "funds": [
    {
-    "code": 150645,
-    "name": "ICICI Prudential Nifty Auto Index Fund",
-    "theme": "Auto",
+    "code": 115676,
+    "name": "SBI GOLD FUND - Regular Plan - Growth",
+    "theme": "Gold",
     "role": "Sector"
    },
    {
-    "code": 152913,
-    "name": "Kotak MNC Fund",
-    "theme": "MNC",
+    "code": 149777,
+    "name": "ICICI Prudential Silver ETF FOF - Regular Plan - Growth",
+    "theme": "Silver",
     "role": "Sector"
    },
    {
@@ -392,8 +392,8 @@
     "role": "Core"
    },
    {
-    "code": 103024,
-    "name": "SBI LARGE & MIDCAP FUND",
+    "code": 102883,
+    "name": "Franklin India Large & Mid Cap Fund",
     "theme": "Mid cap",
     "role": "Core"
    }
@@ -403,32 +403,32 @@
   "date": "2026-04-03",
   "signal_date": "2026-03-27",
   "sectors": [
-   "Healthcare",
-   "PSU"
+   "Gold",
+   "Silver"
   ],
   "funds": [
    {
-    "code": 152084,
-    "name": "HDFC Pharma and Healthcare Fund",
-    "theme": "Healthcare",
+    "code": 115676,
+    "name": "SBI GOLD FUND - Regular Plan - Growth",
+    "theme": "Gold",
     "role": "Sector"
    },
    {
-    "code": 113099,
-    "name": "SBI PSU FUND",
-    "theme": "PSU",
+    "code": 149777,
+    "name": "ICICI Prudential Silver ETF FOF - Regular Plan - Growth",
+    "theme": "Silver",
     "role": "Sector"
-   },
-   {
-    "code": 152934,
-    "name": "ICICI Prudential Nifty200 Value 30 Index Fund",
-    "theme": "Diversified",
-    "role": "Core"
    },
    {
     "code": 151034,
     "name": "HSBC Midcap Fund",
     "theme": "Mid cap",
+    "role": "Core"
+   },
+   {
+    "code": 153100,
+    "name": "Groww Multicap Fund",
+    "theme": "Diversified",
     "role": "Core"
    },
    {
@@ -443,32 +443,32 @@
   "date": "2026-07-03",
   "signal_date": "2026-06-26",
   "sectors": [
-   "Healthcare",
-   "Defence"
+   "Defence",
+   "Healthcare"
   ],
   "funds": [
    {
-    "code": 152084,
-    "name": "HDFC Pharma and Healthcare Fund",
-    "theme": "Healthcare",
-    "role": "Sector"
-   },
-   {
-    "code": 152711,
-    "name": "Motilal Oswal Nifty India Defence Index Fund",
+    "code": 151751,
+    "name": "HDFC Defence Fund",
     "theme": "Defence",
     "role": "Sector"
    },
    {
-    "code": 152934,
-    "name": "ICICI Prudential Nifty200 Value 30 Index Fund",
-    "theme": "Diversified",
-    "role": "Core"
+    "code": 152216,
+    "name": "Kotak Healthcare Fund",
+    "theme": "Healthcare",
+    "role": "Sector"
    },
    {
     "code": 151034,
     "name": "HSBC Midcap Fund",
     "theme": "Mid cap",
+    "role": "Core"
+   },
+   {
+    "code": 153100,
+    "name": "Groww Multicap Fund",
+    "theme": "Diversified",
     "role": "Core"
    },
    {
@@ -483,20 +483,20 @@
   "date": "2026-10-02",
   "signal_date": "2026-09-25",
   "sectors": [
-   "Healthcare",
-   "Defence"
+   "Defence",
+   "Healthcare"
   ],
   "funds": [
    {
-    "code": 152084,
-    "name": "HDFC Pharma and Healthcare Fund",
-    "theme": "Healthcare",
+    "code": 151751,
+    "name": "HDFC Defence Fund",
+    "theme": "Defence",
     "role": "Sector"
    },
    {
-    "code": 152711,
-    "name": "Motilal Oswal Nifty India Defence Index Fund",
-    "theme": "Defence",
+    "code": 152216,
+    "name": "Kotak Healthcare Fund",
+    "theme": "Healthcare",
     "role": "Sector"
    },
    {
@@ -506,15 +506,15 @@
     "role": "Core"
    },
    {
-    "code": 129647,
-    "name": "Union Small Cap Fund",
-    "theme": "Small cap",
+    "code": 153100,
+    "name": "Groww Multicap Fund",
+    "theme": "Diversified",
     "role": "Core"
    },
    {
-    "code": 152016,
-    "name": "LIC MF Value Fund",
-    "theme": "Diversified",
+    "code": 129647,
+    "name": "Union Small Cap Fund",
+    "theme": "Small cap",
     "role": "Core"
    }
   ]
