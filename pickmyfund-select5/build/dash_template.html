@@ -63,6 +63,7 @@ td.n,th.n{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabula
 tr:last-child td{border-bottom:none}
 .chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:3px;background:var(--chip);color:var(--ink);white-space:nowrap}
 .chip.sector{background:color-mix(in srgb,var(--brand) 22%,transparent)}
+.chip.offshore{background:color-mix(in srgb,var(--teal) 22%,transparent)}
 .chip.core{background:color-mix(in srgb,var(--gold) 22%,transparent)}
 .fund{font-weight:500}
 .sub{font-size:12px;color:var(--muted)}
@@ -87,7 +88,7 @@ footer p{margin:0;max-width:95ch}
       <a href="https://pickmyfund.com" target="_blank" rel="noopener"><svg class="logo" viewBox="0 0 616 160" role="img" aria-label="pickmyfund.com" xmlns="http://www.w3.org/2000/svg"><g transform="translate(24,14)"><path d="M14 22 C14 12 22 6 31 11 L110 55 C119 60 119 72 110 77 L31 121 C22 126 14 120 14 110 Z" fill="none" stroke="#C9A44C" stroke-width="8" stroke-linejoin="round"/><rect x="27" y="74" width="12" height="18" rx="2" fill="#C9A44C"/><rect x="45" y="61" width="12" height="31" rx="2" fill="#C9A44C"/><rect x="63" y="48" width="12" height="44" rx="2" fill="#C9A44C"/></g><text x="182" y="95" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="56" letter-spacing="-0.5" fill="#FFFFFF" style="fill:#FFFFFF;font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-size:56px">pick<tspan fill="#C9A44C" style="fill:#C9A44C">my</tspan>fund</text><text x="514" y="95" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="30" style="fill:#94A3A6;font-family:Inter,'Helvetica Neue',Arial,sans-serif;font-size:30px">.com</text></svg></a>
       <div class="eyebrow">Mutual Fund Model · Simple. Clear. Invested.</div>
       <h1>Select <em>5</em></h1>
-      <p class="lede">Two funds in the strongest sectors, with gold and silver competing for those slots, plus three steady core funds. Reviewed every quarter.</p>
+      <p class="lede">Two funds in the strongest sectors or metals, one in the strongest overseas market, and two steady core funds. Reviewed every quarter.</p>
     </div>
     <div class="stamp">
       <span class="live">NAVs to <b id="navdate"></b></span>
@@ -97,7 +98,7 @@ footer p{margin:0;max-width:95ch}
   </header>
 
   <section>
-    <div class="sec-head"><h2>Performance</h2><div class="seg" role="group" aria-label="Period"><button type="button" id="p1" data-p="1" aria-pressed="false">1 year</button><button type="button" id="p3" data-p="3" aria-pressed="true">3 years</button></div></div>
+    <div class="sec-head"><h2>Performance</h2><div class="seg" role="group" aria-label="Period"><button type="button" id="p1" data-p="1" aria-pressed="false">1 year</button><button type="button" id="p3" data-p="3" aria-pressed="false">3 years</button><button type="button" id="p5" data-p="5" aria-pressed="true">5 years</button></div></div>
     <p class="note" id="since" style="margin:-6px 0 12px"></p>
     <div class="kpis" id="kpis"></div>
   </section>
@@ -141,12 +142,17 @@ footer p{margin:0;max-width:95ch}
   </section>
 
   <section>
+    <div class="sec-head"><h2>Overseas markets</h2><p class="note" id="regnote"></p></div>
+    <div class="tbl"><table id="rtbl"></table></div>
+  </section>
+
+  <section>
     <div class="sec-head"><h2>How it works</h2></div>
     <div class="rules">
       <div><h3>Sector &amp; metals slots · 40%</h3><p>Sector fund groups, gold funds and silver funds are ranked together by average 6-month return. The top two go in; a holding stays while it ranks in the top five.</p></div>
-      <div><h3>Core slots · 60%</h3><p>The three steadiest diversified funds across large, flexi, mid and small cap, one per segment, ranked by 1-year return relative to volatility.</p></div>
+      <div><h3>Overseas slot · 20%</h3><p>Overseas regions (US tech, US broad, Taiwan, China, Japan, Europe, emerging markets and others) are ranked by 6-month return. The slot buys the best fund in the top region that is open for subscription; if none beats an arbitrage fund, it holds arbitrage.</p></div><div><h3>Core slots · 40%</h3><p>The two steadiest diversified funds across large, flexi, mid and small cap, one per segment, ranked by 1-year return relative to volatility.</p></div>
       <div><h3>Fund choice</h3><p>Funds above ₹500 cr with a one-year record. A held fund stays while it is in the top three of its group. One fund per fund house.</p></div>
-      <div><h3>Review &amp; new money</h3><p>First week of January, April, July and October; swaps follow the rules, then all five reset to 20%. New money waits in an arbitrage fund and moves in over three months.</p></div>
+      <div><h3>Review &amp; new money</h3><p>Signals are checked at every month end. Funds normally change only at the quarterly rebalance (January, April, July, October), when all five reset to 20%. New money waits in an arbitrage fund and moves in over three months.</p></div>
     </div>
   </section>
 
@@ -175,7 +181,7 @@ function winIdx(years){const last=new Date(S0.dates[S0.dates.length-1]);const t=
 function st(arr,i0){const a=arr.slice(i0).filter(v=>v!=null);const tot=a[a.length-1]/a[0]-1;let pk=a[0],dd=0;for(const v of a){pk=Math.max(pk,v);dd=Math.min(dd,v/pk-1)}const days=(new Date(S0.dates[S0.dates.length-1])-new Date(S0.dates[i0]))/864e5;return{tot,dd,cagr:Math.pow(1+tot,365.25/days)-1,yrs:days/365.25}}
 function render(years){
  document.querySelectorAll('.seg button').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.p===years)));
- const i0=years===3?0:winIdx(1);
+ const i0=winIdx(years);
  const m=st(S0.model,i0),f5=st(S0.n500,i0),f50=st(S0.n50,i0),long=m.yrs>1.5;
  document.getElementById('since').textContent='From '+fmtQ(S0.dates[i0])+' to '+D.navdate+(long?' · annualised figures shown below each total':'');
  const sub=x=>long?pct(x.cagr)+' a year · max fall '+pct(x.dd):'Max fall '+pct(x.dd);
@@ -211,7 +217,7 @@ function chart(i0){
   tip.textContent=`${fmtQ(S.dates[i])} · Model ${S.model[i].toFixed(1)} · N500 ${S.n500[i]!=null?S.n500[i].toFixed(1):'–'} · N50 ${S.n50[i]!=null?S.n50[i].toFixed(1):'–'}`};
  const hit=document.getElementById('hit');hit.addEventListener('pointermove',show);hit.addEventListener('pointerleave',()=>{hx.setAttribute('visibility','hidden');tip.textContent=''});
 }
-let P=3;try{const v=localStorage.getItem('pmf5_period');if(v==='1')P=1}catch(e){}
+let P=5;try{const v=localStorage.getItem('pmf5_period');if(v==='1'||v==='3')P=+v}catch(e){}
 document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{P=+b.dataset.p;try{localStorage.setItem('pmf5_period',String(P))}catch(e){}render(P)}));
 render(P);
 
@@ -225,8 +231,8 @@ render(P);
  document.getElementById('ytbl').innerHTML='<tr><th>Year</th><th class="n">Select 5</th><th class="n">Nifty 500</th><th class="n">Nifty 50</th><th class="n">Lead over Nifty 500</th></tr>'+rows;})();
 
 // quarters
-document.getElementById('qtbl').innerHTML='<tr><th>Review</th><th>Sectors held</th><th class="n">Model</th><th class="n">Nifty 500</th><th class="n">Nifty 50</th><th>Funds</th></tr>'+
- [...D.quarters].reverse().map((q,i)=>`<tr><td>${fmtQ(q.q)}${i===0?' <span class="chip">current</span>':''}</td><td>${q.sectors.map(s=>`<span class="chip sector">${esc(s)}</span>`).join(' ')}</td>
+document.getElementById('qtbl').innerHTML='<tr><th>Review</th><th>Sectors &amp; overseas held</th><th class="n">Model</th><th class="n">Nifty 500</th><th class="n">Nifty 50</th><th>Funds</th></tr>'+
+ [...D.quarters].reverse().map((q,i)=>`<tr><td>${fmtQ(q.q)}${i===0?' <span class="chip">current</span>':''}</td><td>${q.sectors.map(s=>`<span class="chip sector">${esc(s)}</span>`).join(' ')} ${q.offshore?`<span class="chip offshore">${esc(q.offshore)}</span>`:''}</td>
  <td class="n ${cls(q.ret)}"><b>${pct(q.ret)}</b></td><td class="n ${cls(q.n500)}">${pct(q.n500)}</td><td class="n ${cls(q.n50)}">${pct(q.n50)}</td>
  <td><details><summary>5 funds</summary><ul>${q.funds.map(f=>`<li>${esc(clean(D.names[f.code]||f.name))} <span class="sub">${pct(q.fund_ret[f.code])}</span></li>`).join('')}</ul></details></td></tr>`).join('');
 
@@ -243,5 +249,11 @@ document.getElementById('sectnote').textContent='Average return of each sector, 
 const mx=Math.max(...D.sectors.map(s=>Math.abs(s.r6)));
 document.getElementById('stbl').innerHTML='<tr><th class="n">#</th><th>Sector</th><th class="n">3 months</th><th class="n">6 months</th><th style="width:22%"></th><th class="n">1 year</th><th class="n">Funds</th></tr>'+
  D.sectors.map((s,i)=>`<tr><td class="n">${i+1}</td><td>${esc(s.sector)} ${s.chosen?'<span class="chip sector">held</span>':(i<5?'<span class="chip">watch</span>':'')}</td><td class="n ${cls(s.r3)}">${pct(s.r3)}</td><td class="n ${cls(s.r6)}"><b>${pct(s.r6)}</b></td><td><div class="bar"><b class="${s.chosen?'on':''}" style="width:${Math.max(0,s.r6)/mx*100}%"></b></div></td><td class="n ${cls(s.r1y)}">${pct(s.r1y)}</td><td class="n">${s.n}</td></tr>`).join('');
+
+// overseas regions
+(function(){if(!D.regions)return;document.getElementById('regnote').textContent='Average return of overseas funds by region · NGEN data '+D.sect_asof+' · arbitrage 6-month '+pct(D.arb6);
+ const mx=Math.max(...D.regions.map(s=>Math.abs(s.r6)));
+ document.getElementById('rtbl').innerHTML='<tr><th class="n">#</th><th>Region</th><th class="n">3 months</th><th class="n">6 months</th><th style="width:22%"></th><th class="n">1 year</th><th class="n">Funds</th></tr>'+
+ D.regions.map((s,i)=>`<tr><td class="n">${i+1}</td><td>${esc(s.sector)} ${s.chosen?'<span class="chip offshore">held</span>':(s.closed?'<span class="chip">closed to new money</span>':'')}</td><td class="n ${cls(s.r3)}">${pct(s.r3)}</td><td class="n ${cls(s.r6)}"><b>${pct(s.r6)}</b></td><td><div class="bar"><b class="${s.chosen?'on':''}" style="width:${Math.max(0,s.r6)/mx*100}%"></b></div></td><td class="n ${cls(s.r1y)}">${pct(s.r1y)}</td><td class="n">${s.n}</td></tr>`).join('')+(D.closed_note?`<tr><td></td><td colspan="6" class="sub">${esc(D.closed_note)}</td></tr>`:'');})();
 }
 </script>

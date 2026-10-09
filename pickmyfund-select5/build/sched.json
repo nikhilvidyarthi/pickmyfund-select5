@@ -1,22 +1,357 @@
 [
  {
-  "date": "2023-10-06",
-  "signal_date": "2023-09-29",
+  "date": "2021-10-01",
+  "signal_date": "2021-09-24",
   "sectors": [
-   "PSU",
-   "Healthcare"
+   "Tech",
+   "Exports/Services"
   ],
+  "offshore": "US tech",
   "funds": [
    {
-    "code": 150538,
-    "name": "ICICI PRUDENTIAL PSU EQUITY FUND",
+    "code": 145551,
+    "name": "Motilal Oswal Nasdaq 100 Fund of Fund",
+    "theme": "US tech",
+    "role": "Offshore"
+   },
+   {
+    "code": 100363,
+    "name": "ICICI Prudential Technology Fund",
+    "theme": "Tech",
+    "role": "Sector"
+   },
+   {
+    "code": 144838,
+    "name": "Sundaram Services Fund",
+    "theme": "Exports/Services",
+    "role": "Sector"
+   },
+   {
+    "code": 102875,
+    "name": "Kotak Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   },
+   {
+    "code": 125305,
+    "name": "PGIM India Midcap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2022-01-07",
+  "signal_date": "2021-12-31",
+  "sectors": [
+   "Tech",
+   "Exports/Services"
+  ],
+  "offshore": "US tech",
+  "funds": [
+   {
+    "code": 145551,
+    "name": "Motilal Oswal Nasdaq 100 Fund of Fund",
+    "theme": "US tech",
+    "role": "Offshore"
+   },
+   {
+    "code": 100363,
+    "name": "ICICI Prudential Technology Fund",
+    "theme": "Tech",
+    "role": "Sector"
+   },
+   {
+    "code": 144838,
+    "name": "Sundaram Services Fund",
+    "theme": "Exports/Services",
+    "role": "Sector"
+   },
+   {
+    "code": 102875,
+    "name": "Kotak Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   },
+   {
+    "code": 125305,
+    "name": "PGIM India Midcap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2022-04-01",
+  "signal_date": "2022-03-25",
+  "sectors": [
+   "Exports/Services",
+   "Gold"
+  ],
+  "offshore": "Arbitrage",
+  "funds": [
+   {
+    "code": 105968,
+    "name": "Kotak Arbitrage Fund - Regular Plan - Growth",
+    "theme": "Arbitrage (cash)",
+    "role": "Offshore"
+   },
+   {
+    "code": 144838,
+    "name": "Sundaram Services Fund",
+    "theme": "Exports/Services",
+    "role": "Sector"
+   },
+   {
+    "code": 114616,
+    "name": "Nippon India Gold Savings Fund - Regular Plan - Growth Option",
+    "theme": "Gold",
+    "role": "Sector"
+   },
+   {
+    "code": 102875,
+    "name": "Kotak Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   },
+   {
+    "code": 125305,
+    "name": "PGIM India Midcap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2022-07-01",
+  "signal_date": "2022-06-24",
+  "sectors": [
+   "Gold",
+   "PSU"
+  ],
+  "offshore": "Brazil",
+  "funds": [
+   {
+    "code": 115116,
+    "name": "HSBC Brazil Fund",
+    "theme": "Brazil",
+    "role": "Offshore"
+   },
+   {
+    "code": 114616,
+    "name": "Nippon India Gold Savings Fund - Regular Plan - Growth Option",
+    "theme": "Gold",
+    "role": "Sector"
+   },
+   {
+    "code": 147846,
+    "name": "Aditya Birla Sun Life PSU Equity Fund",
     "theme": "PSU",
     "role": "Sector"
    },
    {
-    "code": 102823,
-    "name": "SBI HEALTHCARE OPPORTUNITIES FUND",
-    "theme": "Healthcare",
+    "code": 102875,
+    "name": "Kotak Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   },
+   {
+    "code": 125305,
+    "name": "PGIM India Midcap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2022-10-07",
+  "signal_date": "2022-09-30",
+  "sectors": [
+   "PSU",
+   "Consumption"
+  ],
+  "offshore": "Arbitrage",
+  "funds": [
+   {
+    "code": 105968,
+    "name": "Kotak Arbitrage Fund - Regular Plan - Growth",
+    "theme": "Arbitrage (cash)",
+    "role": "Offshore"
+   },
+   {
+    "code": 147846,
+    "name": "Aditya Birla Sun Life PSU Equity Fund",
+    "theme": "PSU",
+    "role": "Sector"
+   },
+   {
+    "code": 120576,
+    "name": "SBI CONSUMPTION OPPORTUNITIES FUND",
+    "theme": "Consumption",
+    "role": "Sector"
+   },
+   {
+    "code": 102760,
+    "name": "HDFC Focused Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 101065,
+    "name": "Quant Mid Cap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2023-01-06",
+  "signal_date": "2022-12-30",
+  "sectors": [
+   "PSU",
+   "Financials"
+  ],
+  "offshore": "Europe",
+  "funds": [
+   {
+    "code": 126351,
+    "name": "Invesco India - Invesco Pan European Equity Fund of Fund",
+    "theme": "Europe",
+    "role": "Offshore"
+   },
+   {
+    "code": 147846,
+    "name": "Aditya Birla Sun Life PSU Equity Fund",
+    "theme": "PSU",
+    "role": "Sector"
+   },
+   {
+    "code": 147619,
+    "name": "Motilal Oswal Nifty Bank Index Fund",
+    "theme": "Financials",
+    "role": "Sector"
+   },
+   {
+    "code": 102760,
+    "name": "HDFC Focused Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 101065,
+    "name": "Quant Mid Cap Fund",
+    "theme": "Mid cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2023-04-07",
+  "signal_date": "2023-03-31",
+  "sectors": [
+   "PSU",
+   "Financials"
+  ],
+  "offshore": "Europe",
+  "funds": [
+   {
+    "code": 126351,
+    "name": "Invesco India - Invesco Pan European Equity Fund of Fund",
+    "theme": "Europe",
+    "role": "Offshore"
+   },
+   {
+    "code": 147846,
+    "name": "Aditya Birla Sun Life PSU Equity Fund",
+    "theme": "PSU",
+    "role": "Sector"
+   },
+   {
+    "code": 147619,
+    "name": "Motilal Oswal Nifty Bank Index Fund",
+    "theme": "Financials",
+    "role": "Sector"
+   },
+   {
+    "code": 102760,
+    "name": "HDFC Focused Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 145208,
+    "name": "Tata Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2023-07-07",
+  "signal_date": "2023-06-30",
+  "sectors": [
+   "Infra",
+   "Consumption"
+  ],
+  "offshore": "US tech",
+  "funds": [
+   {
+    "code": 149960,
+    "name": "Invesco India - Invesco EQQQ Nasdaq-100 ETF Fund of Fund",
+    "theme": "US tech",
+    "role": "Offshore"
+   },
+   {
+    "code": 103149,
+    "name": "ICICI Prudential Infrastructure Fund",
+    "theme": "Infra",
+    "role": "Sector"
+   },
+   {
+    "code": 114931,
+    "name": "Mirae Asset Great Consumer Fund",
+    "theme": "Consumption",
+    "role": "Sector"
+   },
+   {
+    "code": 102760,
+    "name": "HDFC Focused Fund",
+    "theme": "Diversified",
+    "role": "Core"
+   },
+   {
+    "code": 145208,
+    "name": "Tata Small Cap Fund",
+    "theme": "Small cap",
+    "role": "Core"
+   }
+  ]
+ },
+ {
+  "date": "2023-10-06",
+  "signal_date": "2023-09-29",
+  "sectors": [
+   "Infra",
+   "Consumption"
+  ],
+  "offshore": "US tech",
+  "funds": [
+   {
+    "code": 145551,
+    "name": "Motilal Oswal Nasdaq 100 Fund of Fund",
+    "theme": "US tech",
+    "role": "Offshore"
+   },
+   {
+    "code": 103149,
+    "name": "ICICI Prudential Infrastructure Fund",
+    "theme": "Infra",
+    "role": "Sector"
+   },
+   {
+    "code": 120576,
+    "name": "SBI CONSUMPTION OPPORTUNITIES FUND",
+    "theme": "Consumption",
     "role": "Sector"
    },
    {
@@ -30,12 +365,6 @@
     "name": "Motilal Oswal Large and Midcap Fund",
     "theme": "Mid cap",
     "role": "Core"
-   },
-   {
-    "code": 130502,
-    "name": "HDFC Small Cap Fund",
-    "theme": "Small cap",
-    "role": "Core"
    }
   ]
  },
@@ -43,20 +372,27 @@
   "date": "2024-01-05",
   "signal_date": "2023-12-29",
   "sectors": [
-   "PSU",
-   "Healthcare"
+   "Infra",
+   "PSU"
   ],
+  "offshore": "US tech",
   "funds": [
+   {
+    "code": 145551,
+    "name": "Motilal Oswal Nasdaq 100 Fund of Fund",
+    "theme": "US tech",
+    "role": "Offshore"
+   },
+   {
+    "code": 106096,
+    "name": "SBI INFRASTRUCTURE FUND",
+    "theme": "Infra",
+    "role": "Sector"
+   },
    {
     "code": 150538,
     "name": "ICICI PRUDENTIAL PSU EQUITY FUND",
     "theme": "PSU",
-    "role": "Sector"
-   },
-   {
-    "code": 102823,
-    "name": "SBI HEALTHCARE OPPORTUNITIES FUND",
-    "theme": "Healthcare",
     "role": "Sector"
    },
    {
@@ -66,15 +402,9 @@
     "role": "Core"
    },
    {
-    "code": 130502,
-    "name": "HDFC Small Cap Fund",
+    "code": 150912,
+    "name": "Mahindra Manulife Small Cap Fund",
     "theme": "Small cap",
-    "role": "Core"
-   },
-   {
-    "code": 100377,
-    "name": "Nippon India Growth Mid Cap Fund",
-    "theme": "Mid cap",
     "role": "Core"
    }
   ]
@@ -83,10 +413,23 @@
   "date": "2024-04-05",
   "signal_date": "2024-03-29",
   "sectors": [
-   "PSU",
-   "Healthcare"
+   "Infra",
+   "PSU"
   ],
+  "offshore": "US tech",
   "funds": [
+   {
+    "code": 145551,
+    "name": "Motilal Oswal Nasdaq 100 Fund of Fund",
+    "theme": "US tech",
+    "role": "Offshore"
+   },
+   {
+    "code": 106096,
+    "name": "SBI INFRASTRUCTURE FUND",
+    "theme": "Infra",
+    "role": "Sector"
+   },
    {
     "code": 150538,
     "name": "ICICI PRUDENTIAL PSU EQUITY FUND",
@@ -94,14 +437,8 @@
     "role": "Sector"
    },
    {
-    "code": 102823,
-    "name": "SBI HEALTHCARE OPPORTUNITIES FUND",
-    "theme": "Healthcare",
-    "role": "Sector"
-   },
-   {
-    "code": 147944,
-    "name": "BANDHAN Small Cap Fund",
+    "code": 150912,
+    "name": "Mahindra Manulife Small Cap Fund",
     "theme": "Small cap",
     "role": "Core"
    },
@@ -109,12 +446,6 @@
     "code": 149182,
     "name": "Kotak Multi Cap Fund",
     "theme": "Diversified",
-    "role": "Core"
-   },
-   {
-    "code": 105758,
-    "name": "HDFC Mid Cap Fund",
-    "theme": "Mid cap",
     "role": "Core"
    }
   ]
@@ -123,27 +454,28 @@
   "date": "2024-07-05",
   "signal_date": "2024-06-28",
   "sectors": [
-   "PSU",
-   "Defence"
+   "Infra",
+   "PSU"
   ],
+  "offshore": "US tech",
   "funds": [
+   {
+    "code": 145551,
+    "name": "Motilal Oswal Nasdaq 100 Fund of Fund",
+    "theme": "US tech",
+    "role": "Offshore"
+   },
+   {
+    "code": 106096,
+    "name": "SBI INFRASTRUCTURE FUND",
+    "theme": "Infra",
+    "role": "Sector"
+   },
    {
     "code": 150538,
     "name": "ICICI PRUDENTIAL PSU EQUITY FUND",
     "theme": "PSU",
     "role": "Sector"
-   },
-   {
-    "code": 151751,
-    "name": "HDFC Defence Fund",
-    "theme": "Defence",
-    "role": "Sector"
-   },
-   {
-    "code": 147944,
-    "name": "BANDHAN Small Cap Fund",
-    "theme": "Small cap",
-    "role": "Core"
    },
    {
     "code": 149182,
@@ -152,9 +484,9 @@
     "role": "Core"
    },
    {
-    "code": 106144,
-    "name": "Invesco India Large & Mid Cap Fund",
-    "theme": "Mid cap",
+    "code": 147920,
+    "name": "ITI Small Cap Fund",
+    "theme": "Small cap",
     "role": "Core"
    }
   ]
@@ -163,15 +495,16 @@
   "date": "2024-10-04",
   "signal_date": "2024-09-27",
   "sectors": [
-   "Defence",
-   "Auto"
+   "Auto",
+   "Consumption"
   ],
+  "offshore": "China/HK",
   "funds": [
    {
-    "code": 151751,
-    "name": "HDFC Defence Fund",
-    "theme": "Defence",
-    "role": "Sector"
+    "code": 140242,
+    "name": "Edelweiss Greater China Equity Off-shore Fund",
+    "theme": "China/HK",
+    "role": "Offshore"
    },
    {
     "code": 150645,
@@ -180,21 +513,21 @@
     "role": "Sector"
    },
    {
-    "code": 106144,
-    "name": "Invesco India Large & Mid Cap Fund",
-    "theme": "Mid cap",
-    "role": "Core"
+    "code": 102751,
+    "name": "Nippon India Consumption Fund",
+    "theme": "Consumption",
+    "role": "Sector"
    },
    {
-    "code": 129048,
-    "name": "Motilal Oswal Flexi Cap Fund",
+    "code": 102760,
+    "name": "HDFC Focused Fund",
     "theme": "Diversified",
     "role": "Core"
    },
    {
-    "code": 146380,
-    "name": "DSP Nifty Next 50 Index Fund",
-    "theme": "Large cap",
+    "code": 106144,
+    "name": "Invesco India Large & Mid Cap Fund",
+    "theme": "Mid cap",
     "role": "Core"
    }
   ]
@@ -203,20 +536,27 @@
   "date": "2025-01-03",
   "signal_date": "2024-12-27",
   "sectors": [
-   "Healthcare",
-   "Tech"
+   "Consumption",
+   "Healthcare"
   ],
+  "offshore": "China/HK",
   "funds": [
+   {
+    "code": 140242,
+    "name": "Edelweiss Greater China Equity Off-shore Fund",
+    "theme": "China/HK",
+    "role": "Offshore"
+   },
+   {
+    "code": 152027,
+    "name": "HSBC Consumption Fund",
+    "theme": "Consumption",
+    "role": "Sector"
+   },
    {
     "code": 152084,
     "name": "HDFC Pharma and Healthcare Fund",
     "theme": "Healthcare",
-    "role": "Sector"
-   },
-   {
-    "code": 120577,
-    "name": "SBI TECHNOLOGY OPPORTUNITIES FUND",
-    "theme": "Tech",
     "role": "Sector"
    },
    {
@@ -229,12 +569,6 @@
     "code": 129048,
     "name": "Motilal Oswal Flexi Cap Fund",
     "theme": "Diversified",
-    "role": "Core"
-   },
-   {
-    "code": 147944,
-    "name": "BANDHAN Small Cap Fund",
-    "theme": "Small cap",
     "role": "Core"
    }
   ]
@@ -246,7 +580,14 @@
    "Healthcare",
    "Gold"
   ],
+  "offshore": "China/HK",
   "funds": [
+   {
+    "code": 140242,
+    "name": "Edelweiss Greater China Equity Off-shore Fund",
+    "theme": "China/HK",
+    "role": "Offshore"
+   },
    {
     "code": 152084,
     "name": "HDFC Pharma and Healthcare Fund",
@@ -263,12 +604,6 @@
     "code": 129048,
     "name": "Motilal Oswal Flexi Cap Fund",
     "theme": "Diversified",
-    "role": "Core"
-   },
-   {
-    "code": 147944,
-    "name": "BANDHAN Small Cap Fund",
-    "theme": "Small cap",
     "role": "Core"
    },
    {
@@ -286,7 +621,14 @@
    "Gold",
    "Defence"
   ],
+  "offshore": "Brazil",
   "funds": [
+   {
+    "code": 115116,
+    "name": "HSBC Brazil Fund",
+    "theme": "Brazil",
+    "role": "Offshore"
+   },
    {
     "code": 115676,
     "name": "SBI GOLD FUND - Regular Plan - Growth",
@@ -306,12 +648,6 @@
     "role": "Core"
    },
    {
-    "code": 147944,
-    "name": "BANDHAN Small Cap Fund",
-    "theme": "Small cap",
-    "role": "Core"
-   },
-   {
     "code": 101635,
     "name": "DSP Large Cap Fund",
     "theme": "Large cap",
@@ -326,7 +662,14 @@
    "Gold",
    "Defence"
   ],
+  "offshore": "Taiwan",
   "funds": [
+   {
+    "code": 149328,
+    "name": "Nippon India Taiwan Equity Fund",
+    "theme": "Taiwan",
+    "role": "Offshore"
+   },
    {
     "code": 115676,
     "name": "SBI GOLD FUND - Regular Plan - Growth",
@@ -350,12 +693,6 @@
     "name": "Invesco India Mid Cap Fund",
     "theme": "Mid cap",
     "role": "Core"
-   },
-   {
-    "code": 152232,
-    "name": "Motilal Oswal Small Cap Fund",
-    "theme": "Small cap",
-    "role": "Core"
    }
   ]
  },
@@ -366,7 +703,14 @@
    "Gold",
    "Silver"
   ],
+  "offshore": "Taiwan",
   "funds": [
+   {
+    "code": 149328,
+    "name": "Nippon India Taiwan Equity Fund",
+    "theme": "Taiwan",
+    "role": "Offshore"
+   },
    {
     "code": 115676,
     "name": "SBI GOLD FUND - Regular Plan - Growth",
@@ -390,12 +734,6 @@
     "name": "UTI Nifty 50 Index Fund",
     "theme": "Large cap",
     "role": "Core"
-   },
-   {
-    "code": 102883,
-    "name": "Franklin India Large & Mid Cap Fund",
-    "theme": "Mid cap",
-    "role": "Core"
    }
   ]
  },
@@ -406,7 +744,14 @@
    "Gold",
    "Silver"
   ],
+  "offshore": "Taiwan",
   "funds": [
+   {
+    "code": 149328,
+    "name": "Nippon India Taiwan Equity Fund",
+    "theme": "Taiwan",
+    "role": "Offshore"
+   },
    {
     "code": 115676,
     "name": "SBI GOLD FUND - Regular Plan - Growth",
@@ -430,12 +775,6 @@
     "name": "Groww Multicap Fund",
     "theme": "Diversified",
     "role": "Core"
-   },
-   {
-    "code": 129647,
-    "name": "Union Small Cap Fund",
-    "theme": "Small cap",
-    "role": "Core"
    }
   ]
  },
@@ -446,7 +785,14 @@
    "Defence",
    "Healthcare"
   ],
+  "offshore": "Taiwan",
   "funds": [
+   {
+    "code": 149328,
+    "name": "Nippon India Taiwan Equity Fund",
+    "theme": "Taiwan",
+    "role": "Offshore"
+   },
    {
     "code": 151751,
     "name": "HDFC Defence Fund",
@@ -469,12 +815,6 @@
     "code": 153100,
     "name": "Groww Multicap Fund",
     "theme": "Diversified",
-    "role": "Core"
-   },
-   {
-    "code": 129647,
-    "name": "Union Small Cap Fund",
-    "theme": "Small cap",
     "role": "Core"
    }
   ]
@@ -486,7 +826,14 @@
    "Defence",
    "Healthcare"
   ],
+  "offshore": "Taiwan",
   "funds": [
+   {
+    "code": 149328,
+    "name": "Nippon India Taiwan Equity Fund",
+    "theme": "Taiwan",
+    "role": "Offshore"
+   },
    {
     "code": 151751,
     "name": "HDFC Defence Fund",
@@ -509,12 +856,6 @@
     "code": 153100,
     "name": "Groww Multicap Fund",
     "theme": "Diversified",
-    "role": "Core"
-   },
-   {
-    "code": 129647,
-    "name": "Union Small Cap Fund",
-    "theme": "Small cap",
     "role": "Core"
    }
   ]

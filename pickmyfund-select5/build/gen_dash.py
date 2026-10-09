@@ -56,7 +56,7 @@ for qi, q in enumerate(sched):
     wts_end = (rel.iloc[-1] / rel.iloc[-1].sum()).to_dict()
     qstart_val = val
     val = float(v.iloc[-1])
-    qrows.append(dict(q=q['date'], sectors=q['sectors'], funds=q['funds'], ret=val / qstart_val - 1,
+    qrows.append(dict(q=q['date'], sectors=q['sectors'], offshore=q.get('offshore'), funds=q['funds'], ret=val / qstart_val - 1,
                       fund_ret={str(c): float(rel.iloc[-1][c] - 1) for c in funds},
                       end=str(seg.index[-1].date())))
 model = pd.concat(path)
@@ -101,6 +101,7 @@ DATA = dict(updated=dt.datetime.now(dt.timezone(dt.timedelta(hours=5, minutes=30
             navdate=d_last.strftime('%d %b %Y'), start=start.strftime('%d %b %Y'),
             k=dict(model=k_model, n50=k50, n500=k500, day=day, qtd=qtd),
             series=series, quarters=qrows, hold=hold, fresh=fresh, sectors=stat['sectors'], sect_asof=stat['asof'],
+            regions=stat.get('regions'), arb6=stat.get('arb6'), closed_note=stat.get('closed_note'),
             names={str(c): META[c]['scheme_name'] for c in codes})
 tpl = open(os.path.join(HERE, 'dash_template.html')).read()
 html = tpl.replace('/*__DATA__*/null', json.dumps(DATA, separators=(',', ':')))

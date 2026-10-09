@@ -2,6 +2,14 @@
  "asof": "08-Oct-2026",
  "fresh": [
   {
+   "code": 149911,
+   "name": "Navi Nasdaq 100 US Specific Equity Passive FOF - (G)",
+   "role": "Offshore",
+   "group": "US tech",
+   "aum": 1251.6114,
+   "ter": 0.0035
+  },
+  {
    "code": 152216,
    "name": "Kotak Healthcare Fund - Regular (G)",
    "role": "Sector",
@@ -32,14 +40,6 @@
    "group": "Diversified",
    "aum": 1827.1616,
    "ter": 0.0272
-  },
-  {
-   "code": 151034,
-   "name": "HSBC Midcap Fund (G)",
-   "role": "Core",
-   "group": "Mid cap",
-   "aum": 17188.237,
-   "ter": 0.0221
   }
  ],
  "sectors": [
@@ -147,5 +147,108 @@
    "n": 15,
    "chosen": false
   }
- ]
+ ],
+ "regions": [
+  {
+   "sector": "Taiwan",
+   "r3": 0.105359,
+   "r6": 0.314096,
+   "r1y": 1.257669,
+   "n": 1,
+   "chosen": false,
+   "closed": true
+  },
+  {
+   "sector": "US tech",
+   "r3": 0.058139699999999996,
+   "r6": 0.27900420000000004,
+   "r1y": 0.3215365,
+   "n": 10,
+   "chosen": true,
+   "closed": false
+  },
+  {
+   "sector": "US broad",
+   "r3": 0.0413307,
+   "r6": 0.1724202,
+   "r1y": 0.2542995,
+   "n": 10,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "Emerging mkts",
+   "r3": 0.0310846,
+   "r6": 0.149579,
+   "r1y": 0.3435464,
+   "n": 5,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "Japan",
+   "r3": 0.042013,
+   "r6": 0.143285,
+   "r1y": 0.28993899999999995,
+   "n": 2,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "ASEAN/Asia",
+   "r3": 0.005749,
+   "r6": 0.1265575,
+   "r1y": 0.238876,
+   "n": 2,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "China/HK",
+   "r3": 0.033887,
+   "r6": 0.12385850000000001,
+   "r1y": 0.20251049999999998,
+   "n": 2,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "Developed ex-US",
+   "r3": 0.0233165,
+   "r6": 0.1080255,
+   "r1y": 0.240263,
+   "n": 2,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "Global",
+   "r3": 0.001319357142857143,
+   "r6": 0.07986985714285713,
+   "r1y": 0.11977835714285713,
+   "n": 14,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "Europe",
+   "r3": -0.012369,
+   "r6": 0.028696,
+   "r1y": 0.182974,
+   "n": 1,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "Brazil",
+   "r3": 0.051851,
+   "r6": -0.043597,
+   "r1y": 0.270496,
+   "n": 1,
+   "chosen": false,
+   "closed": false
+  }
+ ],
+ "arb6": 0.026884945945945943,
+ "closed_note": "Nippon India international funds (incl. Taiwan) closed to new money since 21-Apr-2026; Axis overseas schemes since 6-May-2026; ICICI Pru Nasdaq 100 Index suspended."
 }
