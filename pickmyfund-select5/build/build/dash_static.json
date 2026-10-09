@@ -1,0 +1,254 @@
+{
+ "asof": "08-Oct-2026",
+ "fresh": [
+  {
+   "code": 149911,
+   "name": "Navi Nasdaq 100 US Specific Equity Passive FOF - (G)",
+   "role": "Offshore",
+   "group": "US tech",
+   "aum": 1251.6114,
+   "ter": 0.0035
+  },
+  {
+   "code": 152216,
+   "name": "Kotak Healthcare Fund - Regular (G)",
+   "role": "Sector",
+   "group": "Healthcare",
+   "aum": 767.6998,
+   "ter": 0.0255
+  },
+  {
+   "code": 151751,
+   "name": "HDFC Defence Fund - Regular (G)",
+   "role": "Sector",
+   "group": "Defence",
+   "aum": 11477.5929,
+   "ter": 0.0179
+  },
+  {
+   "code": 145677,
+   "name": "Bank of India Small Cap Fund (G)",
+   "role": "Core",
+   "group": "Small cap",
+   "aum": 3307.1813,
+   "ter": 0.0217
+  },
+  {
+   "code": 122387,
+   "name": "Motilal Oswal Focused Fund (G)",
+   "role": "Core",
+   "group": "Diversified",
+   "aum": 1827.1616,
+   "ter": 0.0272
+  }
+ ],
+ "sectors": [
+  {
+   "sector": "Healthcare",
+   "r3": 0.006327565217391304,
+   "r6": 0.1754994782608696,
+   "r1y": 0.14045773913043477,
+   "n": 23,
+   "chosen": true
+  },
+  {
+   "sector": "Defence",
+   "r3": -0.020854333333333336,
+   "r6": 0.12781833333333334,
+   "r1y": 0.149818,
+   "n": 3,
+   "chosen": true
+  },
+  {
+   "sector": "Manufacturing",
+   "r3": -0.0067196875,
+   "r6": 0.0877029375,
+   "r1y": 0.0676814375,
+   "n": 16,
+   "chosen": false
+  },
+  {
+   "sector": "MNC",
+   "r3": -0.024805999999999998,
+   "r6": 0.06444842857142857,
+   "r1y": 0.01778128571428571,
+   "n": 7,
+   "chosen": false
+  },
+  {
+   "sector": "Auto & Transport",
+   "r3": -0.014099200000000001,
+   "r6": 0.059590699999999996,
+   "r1y": 0.0042383,
+   "n": 10,
+   "chosen": false
+  },
+  {
+   "sector": "Consumption",
+   "r3": -0.031380083333333336,
+   "r6": 0.050903666666666667,
+   "r1y": -0.04465533333333333,
+   "n": 36,
+   "chosen": false
+  },
+  {
+   "sector": "Infrastructure",
+   "r3": -0.05747013333333333,
+   "r6": 0.0323646,
+   "r1y": -0.014314899999999998,
+   "n": 30,
+   "chosen": false
+  },
+  {
+   "sector": "IT & Technology",
+   "r3": 0.008201136363636362,
+   "r6": 0.024414590909090907,
+   "r1y": -0.10792904545454546,
+   "n": 22,
+   "chosen": false
+  },
+  {
+   "sector": "Energy & Resources",
+   "r3": -0.03916890909090909,
+   "r6": 0.004329727272727273,
+   "r1y": 0.039995636363636365,
+   "n": 11,
+   "chosen": false
+  },
+  {
+   "sector": "Banking & Financials",
+   "r3": -0.05889751111111111,
+   "r6": 5.0577777777777744e-05,
+   "r1y": 0.000340888888888888,
+   "n": 45,
+   "chosen": false
+  },
+  {
+   "sector": "Gold",
+   "r3": 0.023816818181818186,
+   "r6": -0.023073999999999997,
+   "r1y": 0.17163918181818183,
+   "n": 22,
+   "chosen": false
+  },
+  {
+   "sector": "PSU",
+   "r3": -0.05959277777777778,
+   "r6": -0.06976866666666666,
+   "r1y": -0.034290666666666664,
+   "n": 9,
+   "chosen": false
+  },
+  {
+   "sector": "Silver",
+   "r3": -0.0009279333333333333,
+   "r6": -0.0730822,
+   "r1y": 0.3220776666666667,
+   "n": 15,
+   "chosen": false
+  }
+ ],
+ "regions": [
+  {
+   "sector": "Taiwan",
+   "r3": 0.105359,
+   "r6": 0.314096,
+   "r1y": 1.257669,
+   "n": 1,
+   "chosen": false,
+   "closed": true
+  },
+  {
+   "sector": "US tech",
+   "r3": 0.058139699999999996,
+   "r6": 0.27900420000000004,
+   "r1y": 0.3215365,
+   "n": 10,
+   "chosen": true,
+   "closed": false
+  },
+  {
+   "sector": "US broad",
+   "r3": 0.0413307,
+   "r6": 0.1724202,
+   "r1y": 0.2542995,
+   "n": 10,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "Emerging mkts",
+   "r3": 0.0310846,
+   "r6": 0.149579,
+   "r1y": 0.3435464,
+   "n": 5,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "Japan",
+   "r3": 0.042013,
+   "r6": 0.143285,
+   "r1y": 0.28993899999999995,
+   "n": 2,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "ASEAN/Asia",
+   "r3": 0.005749,
+   "r6": 0.1265575,
+   "r1y": 0.238876,
+   "n": 2,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "China/HK",
+   "r3": 0.033887,
+   "r6": 0.12385850000000001,
+   "r1y": 0.20251049999999998,
+   "n": 2,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "Developed ex-US",
+   "r3": 0.0233165,
+   "r6": 0.1080255,
+   "r1y": 0.240263,
+   "n": 2,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "Global",
+   "r3": 0.001319357142857143,
+   "r6": 0.07986985714285713,
+   "r1y": 0.11977835714285713,
+   "n": 14,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "Europe",
+   "r3": -0.012369,
+   "r6": 0.028696,
+   "r1y": 0.182974,
+   "n": 1,
+   "chosen": false,
+   "closed": false
+  },
+  {
+   "sector": "Brazil",
+   "r3": 0.051851,
+   "r6": -0.043597,
+   "r1y": 0.270496,
+   "n": 1,
+   "chosen": false,
+   "closed": false
+  }
+ ],
+ "arb6": 0.026884945945945943,
+ "closed_note": "Nippon India international funds (incl. Taiwan) closed to new money since 21-Apr-2026; Axis overseas schemes since 6-May-2026; ICICI Pru Nasdaq 100 Index suspended."
+}
