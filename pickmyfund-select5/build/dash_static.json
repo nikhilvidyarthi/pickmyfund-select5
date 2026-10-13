@@ -18,12 +18,12 @@
    "ter": 0.0255
   },
   {
-   "code": 151751,
-   "name": "HDFC Defence Fund - Regular (G)",
+   "code": 152800,
+   "name": "Aditya Birla SL Nifty India Defence Index Fund-Reg (G)",
    "role": "Sector",
    "group": "Defence",
-   "aum": 11477.5929,
-   "ter": 0.0179
+   "aum": 1398.1762,
+   "ter": 0.0114
   },
   {
    "code": 145677,
@@ -250,5 +250,5 @@
   }
  ],
  "arb6": 0.026884945945945943,
- "closed_note": "Nippon India international funds (incl. Taiwan) closed to new money since 21-Apr-2026; Axis overseas schemes since 6-May-2026; ICICI Pru Nasdaq 100 Index suspended."
+ "closed_note": "Nippon India international funds (incl. Taiwan) closed to new money since 21-Apr-2026; Axis overseas schemes since 6-May-2026; ICICI Pru Nasdaq 100 Index suspended. HDFC Defence Fund accepts only SIP/STP (capped at Rs 25,000 per PAN) since 4 May 2026, so new money in Defence goes to the Aditya Birla Sun Life Nifty India Defence Index Fund; existing HDFC Defence holdings stay."
 }

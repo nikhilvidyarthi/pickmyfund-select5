@@ -3,10 +3,11 @@ Usage: python3 fund5_ngen.py <ngen_stats.xlsx>   -> prints picks; returns dict v
 import openpyxl,pandas as pd,numpy as np,re,sys
 AUM_MIN=500
 OFF_AUM_MIN=500
-# Offshore funds known to be CLOSED to fresh subscriptions. Update at every monthly check (AMC websites).
+# Funds CLOSED to fresh lumpsum (offshore AND domestic; SIP/STP-only counts as closed). Update at every monthly check (AMC websites).
 # Sources (2026): Nippon India international funds closed 21-Apr-2026; Axis select overseas schemes closed 6-May-2026;
 # ICICI Pru NASDAQ 100 Index suspended. Kotak global schemes capped at Rs 1 lakh per PAN per month (treated as open).
-CLOSED=['nippon india taiwan','nippon india japan','nippon india us','axis nasdaq','axis global','axis greater china','icici pru nasdaq']
+CLOSED=['nippon india taiwan','nippon india japan','nippon india us','axis nasdaq','axis global','axis greater china','icici pru nasdaq',
+        'hdfc defence']  # HDFC Defence: lumpsum/switch-in paused, SIP & STP capped Rs 25,000 per PAN (wef 04-May-2026)
 def is_closed(n): return any(k in n.lower() for k in CLOSED)
 SECT_CAT={'Sectoral: Pharma & Healthcare (Sectoral Fund)':'Healthcare','Sectoral: Banking & Financial Services (Sectoral Fund)':'Banking & Financials',
 'Sectoral: IT & Technology (Sectoral Fund)':'IT & Technology','Sectoral: Consumption (Sectoral Fund)':'Consumption','Sectoral: Auto & Transportation (Sectoral Fund)':'Auto & Transport',
@@ -61,7 +62,7 @@ def run(path,K=2,verbose=True):
     # sector strength: equal-weight 6M return of all funds in group with a 6M figure
     s=df[(df.Role=='Sector')&(df['6 Month'].fillna(0)!=0)]
     sect=s.groupby('Group').agg(r6=('6 Month','mean'),r3m=('3 Month','mean'),r1y=('1 Year','mean'),n=('Fund Name','count')).sort_values('r6',ascending=False)
-    elig=df[df.has1y&(df['AUM (Cr)']>=AUM_MIN)]
+    elig=df[df.has1y&(df['AUM (Cr)']>=AUM_MIN)&~df['Fund Name'].map(is_closed)]
     # top K sectors that have an eligible fund
     chosen=[g for g in sect.index if (elig.Group==g).any()][:K]
     picks=[];amcs=set()
