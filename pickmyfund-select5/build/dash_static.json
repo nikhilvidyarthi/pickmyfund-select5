@@ -2,12 +2,12 @@
  "asof": "08-Oct-2026",
  "fresh": [
   {
-   "code": 149911,
-   "name": "Navi Nasdaq 100 US Specific Equity Passive FOF - (G)",
+   "code": 105968,
+   "name": "Kotak Arbitrage Fund - Regular (G)",
    "role": "Offshore",
-   "group": "US tech",
-   "aum": 1251.6114,
-   "ter": 0.0035
+   "group": "Overseas slot parked in arbitrage",
+   "aum": 75712.3451,
+   "ter": 0.0291
   },
   {
    "code": 152216,
@@ -164,8 +164,8 @@
    "r6": 0.27900420000000004,
    "r1y": 0.3215365,
    "n": 10,
-   "chosen": true,
-   "closed": false
+   "chosen": false,
+   "closed": true
   },
   {
    "sector": "US broad",
@@ -174,7 +174,7 @@
    "r1y": 0.2542995,
    "n": 10,
    "chosen": false,
-   "closed": false
+   "closed": true
   },
   {
    "sector": "Emerging mkts",
@@ -183,7 +183,7 @@
    "r1y": 0.3435464,
    "n": 5,
    "chosen": false,
-   "closed": false
+   "closed": true
   },
   {
    "sector": "Japan",
@@ -192,7 +192,7 @@
    "r1y": 0.28993899999999995,
    "n": 2,
    "chosen": false,
-   "closed": false
+   "closed": true
   },
   {
    "sector": "ASEAN/Asia",
@@ -201,7 +201,7 @@
    "r1y": 0.238876,
    "n": 2,
    "chosen": false,
-   "closed": false
+   "closed": true
   },
   {
    "sector": "China/HK",
@@ -210,7 +210,7 @@
    "r1y": 0.20251049999999998,
    "n": 2,
    "chosen": false,
-   "closed": false
+   "closed": true
   },
   {
    "sector": "Developed ex-US",
@@ -219,7 +219,7 @@
    "r1y": 0.240263,
    "n": 2,
    "chosen": false,
-   "closed": false
+   "closed": true
   },
   {
    "sector": "Global",
@@ -228,7 +228,7 @@
    "r1y": 0.11977835714285713,
    "n": 14,
    "chosen": false,
-   "closed": false
+   "closed": true
   },
   {
    "sector": "Europe",
@@ -237,7 +237,7 @@
    "r1y": 0.182974,
    "n": 1,
    "chosen": false,
-   "closed": false
+   "closed": true
   },
   {
    "sector": "Brazil",
@@ -246,9 +246,9 @@
    "r1y": 0.270496,
    "n": 1,
    "chosen": false,
-   "closed": false
+   "closed": true
   }
  ],
  "arb6": 0.026884945945945943,
- "closed_note": "Nippon India international funds (incl. Taiwan) closed to new money since 21-Apr-2026; Axis overseas schemes since 6-May-2026; ICICI Pru Nasdaq 100 Index suspended. HDFC Defence Fund accepts only SIP/STP (capped at Rs 25,000 per PAN) since 4 May 2026, so new money in Defence goes to the Aditya Birla Sun Life Nifty India Defence Index Fund; existing HDFC Defence holdings stay."
+ "closed_note": "Nearly every overseas fund is closed to new money: as of 24 Sep 2026 only Baroda BNP Paribas Aqua FoF and three Invesco FoFs (Global Equity Income, Pan European, Global Consumer Trends) were open, all below the model's Rs 500 Cr size floor. Navi Nasdaq 100, Motilal Oswal Nasdaq 100, ICICI Pru Nasdaq 100, Nippon and Axis overseas funds are shut. So the overseas 20% is parked in arbitrage for new money until a qualifying fund reopens; existing overseas holdings stay. HDFC Defence Fund accepts only SIP/STP (capped at Rs 25,000 per PAN) since 4 May 2026, so new money in Defence goes to the Aditya Birla Sun Life Nifty India Defence Index Fund."
 }

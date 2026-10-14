@@ -7,8 +7,12 @@ OFF_AUM_MIN=500
 # Sources (2026): Nippon India international funds closed 21-Apr-2026; Axis select overseas schemes closed 6-May-2026;
 # ICICI Pru NASDAQ 100 Index suspended. Kotak global schemes capped at Rs 1 lakh per PAN per month (treated as open).
 CLOSED=['nippon india taiwan','nippon india japan','nippon india us','axis nasdaq','axis global','axis greater china','icici pru nasdaq',
-        'hdfc defence']  # HDFC Defence: lumpsum/switch-in paused, SIP & STP capped Rs 25,000 per PAN (wef 04-May-2026)
+        'hdfc defence','navi nasdaq']  # HDFC Defence: lumpsum/switch-in paused, SIP & STP capped Rs 25,000 per PAN (wef 04-May-2026)
+# When most overseas funds are shut (industry limit hit), list the few OPEN ones here instead; None = use CLOSED list.
+# As of 24-Sep-2026 (Value Research): only Baroda BNP Paribas Aqua FoF and three Invesco FoFs (GEI, PEE, GCT; Rs 10 lakh/PAN/day) open.
+OFFSHORE_OPEN=['baroda bnp paribas aqua','invesco gei','invesco pee','invesco gct']
 def is_closed(n): return any(k in n.lower() for k in CLOSED)
+def off_open(n): return (not is_closed(n)) if OFFSHORE_OPEN is None else any(k in n.lower() for k in OFFSHORE_OPEN)
 SECT_CAT={'Sectoral: Pharma & Healthcare (Sectoral Fund)':'Healthcare','Sectoral: Banking & Financial Services (Sectoral Fund)':'Banking & Financials',
 'Sectoral: IT & Technology (Sectoral Fund)':'IT & Technology','Sectoral: Consumption (Sectoral Fund)':'Consumption','Sectoral: Auto & Transportation (Sectoral Fund)':'Auto & Transport',
 'Sectoral: Energy & Resources (Thematic Fund)':'Energy & Resources','Sectoral: Infrastructure (Thematic Fund)':'Infrastructure','Sectoral: Manufacturing (Thematic Fund)':'Manufacturing',
@@ -73,7 +77,7 @@ def run(path,K=2,verbose=True):
     arb6=df[(df.Role=='Cash')&(df['6 Month'].fillna(0)!=0)]['6 Month'].mean()
     o=df[(df.Role=='Offshore')&(df['6 Month'].fillna(0)!=0)]
     regions=o.groupby('Group').agg(r6=('6 Month','mean'),r3m=('3 Month','mean'),r1y=('1 Year','mean'),n=('Fund Name','count')).sort_values('r6',ascending=False)
-    oe=df[(df.Role=='Offshore')&df.has1y&(df['AUM (Cr)']>=OFF_AUM_MIN)&~df['Fund Name'].map(is_closed)]
+    oe=df[(df.Role=='Offshore')&df.has1y&(df['AUM (Cr)']>=OFF_AUM_MIN)&df['Fund Name'].map(off_open)]
     off_region=next((g for g in regions.index if regions.loc[g,'r6']>arb6 and (oe.Group==g).any()),None)
     offshore=None
     if off_region:
@@ -82,7 +86,7 @@ def run(path,K=2,verbose=True):
     if offshore is None:
         a=df[(df.Role=='Cash')&(df['AUM (Cr)']>=AUM_MIN)].sort_values('AUM (Cr)',ascending=False)
         offshore=a.iloc[0] if len(a) else None
-    off_alts=oe[oe.Group.isin(list(regions.index[:3]))].sort_values(['Group','Score'],ascending=[True,False]).groupby('Group').head(4)
+    off_alts=df[(df.Role=='Offshore')&df.has1y&(df['AUM (Cr)']>=OFF_AUM_MIN)&df.Group.isin(list(regions.index[:3]))].sort_values(['Group','Score'],ascending=[True,False]).groupby('Group').head(4)
     segs=set()
     for _,c in elig[elig.Role=='Core'].sort_values('Score',ascending=False).iterrows():
         if len(picks)>=4: break
