@@ -1,254 +1,254 @@
 {
- "asof": "08-Oct-2026",
+ "asof": "13-Nov-2026",
  "fresh": [
   {
    "code": 105968,
-   "name": "Kotak Arbitrage Fund - Regular (G)",
+   "name": "Kotak Arbitrage Fund (G)",
    "role": "Offshore",
-   "group": "Overseas slot parked in arbitrage",
-   "aum": 75712.3451,
-   "ter": 0.0291
+   "group": "Overseas slot in arbitrage",
+   "aum": 75274.992,
+   "ter": 0.0288
   },
   {
-   "code": 152216,
-   "name": "Kotak Healthcare Fund - Regular (G)",
+   "code": 152658,
+   "name": "SBI Automotive Opportunities Fund - Regular (G)",
+   "role": "Sector",
+   "group": "Auto & Transport",
+   "aum": 6070.8205,
+   "ter": 0.02
+  },
+  {
+   "code": 152084,
+   "name": "HDFC Pharma and Healthcare Fund - Regular (G)",
    "role": "Sector",
    "group": "Healthcare",
-   "aum": 767.6998,
-   "ter": 0.0255
-  },
-  {
-   "code": 152800,
-   "name": "Aditya Birla SL Nifty India Defence Index Fund-Reg (G)",
-   "role": "Sector",
-   "group": "Defence",
-   "aum": 1398.1762,
-   "ter": 0.0114
-  },
-  {
-   "code": 145677,
-   "name": "Bank of India Small Cap Fund (G)",
-   "role": "Core",
-   "group": "Small cap",
-   "aum": 3307.1813,
-   "ter": 0.0217
+   "aum": 3501.3685,
+   "ter": 0.0212
   },
   {
    "code": 122387,
    "name": "Motilal Oswal Focused Fund (G)",
    "role": "Core",
    "group": "Diversified",
-   "aum": 1827.1616,
-   "ter": 0.0272
+   "aum": 1845.1123,
+   "ter": 0.0266
+  },
+  {
+   "code": 145677,
+   "name": "Bank of India Small Cap Fund (G)",
+   "role": "Core",
+   "group": "Small cap",
+   "aum": 3670.7549,
+   "ter": 0.0222
   }
  ],
  "sectors": [
   {
+   "sector": "Auto & Transport",
+   "r3": -0.0130545,
+   "r6": 0.1488375,
+   "r1y": 0.0831692,
+   "n": 10,
+   "chosen": true
+  },
+  {
    "sector": "Healthcare",
-   "r3": 0.006327565217391304,
-   "r6": 0.1754994782608696,
-   "r1y": 0.14045773913043477,
+   "r3": 0.040411521739130436,
+   "r6": 0.12292652173913042,
+   "r1y": 0.19319473913043478,
    "n": 23,
    "chosen": true
   },
   {
-   "sector": "Defence",
-   "r3": -0.020854333333333336,
-   "r6": 0.12781833333333334,
-   "r1y": 0.149818,
-   "n": 3,
-   "chosen": true
-  },
-  {
-   "sector": "Manufacturing",
-   "r3": -0.0067196875,
-   "r6": 0.0877029375,
-   "r1y": 0.0676814375,
-   "n": 16,
-   "chosen": false
-  },
-  {
-   "sector": "MNC",
-   "r3": -0.024805999999999998,
-   "r6": 0.06444842857142857,
-   "r1y": 0.01778128571428571,
-   "n": 7,
-   "chosen": false
-  },
-  {
-   "sector": "Auto & Transport",
-   "r3": -0.014099200000000001,
-   "r6": 0.059590699999999996,
-   "r1y": 0.0042383,
-   "n": 10,
-   "chosen": false
-  },
-  {
-   "sector": "Consumption",
-   "r3": -0.031380083333333336,
-   "r6": 0.050903666666666667,
-   "r1y": -0.04465533333333333,
-   "n": 36,
-   "chosen": false
-  },
-  {
-   "sector": "Infrastructure",
-   "r3": -0.05747013333333333,
-   "r6": 0.0323646,
-   "r1y": -0.014314899999999998,
-   "n": 30,
-   "chosen": false
-  },
-  {
    "sector": "IT & Technology",
-   "r3": 0.008201136363636362,
-   "r6": 0.024414590909090907,
-   "r1y": -0.10792904545454546,
+   "r3": 0.023921272727272725,
+   "r6": 0.11080572727272728,
+   "r1y": -0.0678059090909091,
    "n": 22,
-   "chosen": false
-  },
-  {
-   "sector": "Energy & Resources",
-   "r3": -0.03916890909090909,
-   "r6": 0.004329727272727273,
-   "r1y": 0.039995636363636365,
-   "n": 11,
    "chosen": false
   },
   {
    "sector": "Banking & Financials",
-   "r3": -0.05889751111111111,
-   "r6": 5.0577777777777744e-05,
-   "r1y": 0.000340888888888888,
-   "n": 45,
+   "r3": 0.046692804347826085,
+   "r6": 0.10458434782608696,
+   "r1y": 0.05047152173913043,
+   "n": 46,
    "chosen": false
   },
   {
-   "sector": "Gold",
-   "r3": 0.023816818181818186,
-   "r6": -0.023073999999999997,
-   "r1y": 0.17163918181818183,
-   "n": 22,
+   "sector": "Consumption",
+   "r3": 0.002449527777777778,
+   "r6": 0.08877172222222222,
+   "r1y": 0.003614611111111112,
+   "n": 36,
+   "chosen": false
+  },
+  {
+   "sector": "Manufacturing",
+   "r3": -0.0176741875,
+   "r6": 0.06417806250000001,
+   "r1y": 0.087831875,
+   "n": 16,
+   "chosen": false
+  },
+  {
+   "sector": "Infrastructure",
+   "r3": -0.012935566666666667,
+   "r6": 0.04173713333333333,
+   "r1y": 0.013219266666666667,
+   "n": 30,
+   "chosen": false
+  },
+  {
+   "sector": "MNC",
+   "r3": -0.04234557142857143,
+   "r6": 0.03327271428571428,
+   "r1y": 0.027273,
+   "n": 7,
+   "chosen": false
+  },
+  {
+   "sector": "Defence",
+   "r3": -0.06492049999999999,
+   "r6": 0.030592,
+   "r1y": 0.09762475,
+   "n": 4,
    "chosen": false
   },
   {
    "sector": "PSU",
-   "r3": -0.05959277777777778,
-   "r6": -0.06976866666666666,
-   "r1y": -0.034290666666666664,
+   "r3": -0.0008428888888888884,
+   "r6": 0.012533888888888891,
+   "r1y": -0.008882555555555553,
    "n": 9,
    "chosen": false
   },
   {
+   "sector": "Energy & Resources",
+   "r3": -0.030062363636363634,
+   "r6": -0.028901272727272723,
+   "r1y": 0.03783445454545454,
+   "n": 11,
+   "chosen": false
+  },
+  {
+   "sector": "Gold",
+   "r3": -0.10613336363636364,
+   "r6": -0.1335675,
+   "r1y": 0.07667745454545455,
+   "n": 22,
+   "chosen": false
+  },
+  {
    "sector": "Silver",
-   "r3": -0.0009279333333333333,
-   "r6": -0.0730822,
-   "r1y": 0.3220776666666667,
+   "r3": -0.23238586666666666,
+   "r6": -0.3209419333333334,
+   "r1y": 0.09808366666666667,
    "n": 15,
    "chosen": false
   }
  ],
  "regions": [
   {
-   "sector": "Taiwan",
-   "r3": 0.105359,
-   "r6": 0.314096,
-   "r1y": 1.257669,
+   "sector": "Europe",
+   "r3": -0.053829,
+   "r6": 0.007514,
+   "r1y": 0.162983,
    "n": 1,
    "chosen": false,
    "closed": true
   },
   {
-   "sector": "US tech",
-   "r3": 0.058139699999999996,
-   "r6": 0.27900420000000004,
-   "r1y": 0.3215365,
-   "n": 10,
+   "sector": "Developed ex-US",
+   "r3": -0.053905,
+   "r6": -0.006252,
+   "r1y": 0.1774175,
+   "n": 2,
    "chosen": false,
    "closed": true
   },
   {
    "sector": "US broad",
-   "r3": 0.0413307,
-   "r6": 0.1724202,
-   "r1y": 0.2542995,
+   "r3": -0.0485613,
+   "r6": -0.011481000000000002,
+   "r1y": 0.1604451,
+   "n": 10,
+   "chosen": false,
+   "closed": true
+  },
+  {
+   "sector": "Global",
+   "r3": -0.06825642857142857,
+   "r6": -0.03163757142857143,
+   "r1y": 0.0813265,
+   "n": 14,
+   "chosen": false,
+   "closed": true
+  },
+  {
+   "sector": "ASEAN/Asia",
+   "r3": -0.0997495,
+   "r6": -0.038824,
+   "r1y": 0.13183,
+   "n": 2,
+   "chosen": false,
+   "closed": true
+  },
+  {
+   "sector": "Japan",
+   "r3": -0.08355599999999999,
+   "r6": -0.04638200000000001,
+   "r1y": 0.165522,
+   "n": 2,
+   "chosen": false,
+   "closed": true
+  },
+  {
+   "sector": "US tech",
+   "r3": -0.0907003,
+   "r6": -0.0565896,
+   "r1y": 0.1497239,
    "n": 10,
    "chosen": false,
    "closed": true
   },
   {
    "sector": "Emerging mkts",
-   "r3": 0.0310846,
-   "r6": 0.149579,
-   "r1y": 0.3435464,
+   "r3": -0.1208996,
+   "r6": -0.117649,
+   "r1y": 0.1407872,
    "n": 5,
    "chosen": false,
    "closed": true
   },
   {
-   "sector": "Japan",
-   "r3": 0.042013,
-   "r6": 0.143285,
-   "r1y": 0.28993899999999995,
-   "n": 2,
-   "chosen": false,
-   "closed": true
-  },
-  {
-   "sector": "ASEAN/Asia",
-   "r3": 0.005749,
-   "r6": 0.1265575,
-   "r1y": 0.238876,
-   "n": 2,
+   "sector": "Brazil",
+   "r3": -0.062042,
+   "r6": -0.128169,
+   "r1y": 0.011436,
+   "n": 1,
    "chosen": false,
    "closed": true
   },
   {
    "sector": "China/HK",
-   "r3": 0.033887,
-   "r6": 0.12385850000000001,
-   "r1y": 0.20251049999999998,
+   "r3": -0.14120700000000003,
+   "r6": -0.1362035,
+   "r1y": 0.0563275,
    "n": 2,
    "chosen": false,
    "closed": true
   },
   {
-   "sector": "Developed ex-US",
-   "r3": 0.0233165,
-   "r6": 0.1080255,
-   "r1y": 0.240263,
-   "n": 2,
-   "chosen": false,
-   "closed": true
-  },
-  {
-   "sector": "Global",
-   "r3": 0.001319357142857143,
-   "r6": 0.07986985714285713,
-   "r1y": 0.11977835714285713,
-   "n": 14,
-   "chosen": false,
-   "closed": true
-  },
-  {
-   "sector": "Europe",
-   "r3": -0.012369,
-   "r6": 0.028696,
-   "r1y": 0.182974,
-   "n": 1,
-   "chosen": false,
-   "closed": true
-  },
-  {
-   "sector": "Brazil",
-   "r3": 0.051851,
-   "r6": -0.043597,
-   "r1y": 0.270496,
+   "sector": "Taiwan",
+   "r3": -0.257731,
+   "r6": -0.209566,
+   "r1y": 0.575703,
    "n": 1,
    "chosen": false,
    "closed": true
   }
  ],
- "arb6": 0.026884945945945943,
- "closed_note": "Nearly every overseas fund is closed to new money: as of 24 Sep 2026 only Baroda BNP Paribas Aqua FoF and three Invesco FoFs (Global Equity Income, Pan European, Global Consumer Trends) were open, all below the model's Rs 500 Cr size floor. Navi Nasdaq 100, Motilal Oswal Nasdaq 100, ICICI Pru Nasdaq 100, Nippon and Axis overseas funds are shut. So the overseas 20% is parked in arbitrage for new money until a qualifying fund reopens; existing overseas holdings stay. HDFC Defence Fund accepts only SIP/STP (capped at Rs 25,000 per PAN) since 4 May 2026, so new money in Defence goes to the Aditya Birla Sun Life Nifty India Defence Index Fund."
+ "arb6": 0.02841686842105264,
+ "closed_note": "13 Nov 2026: no overseas region beats arbitrage over 6 months (best: Europe +0.8% vs arbitrage +2.8%), so the overseas 20% stays in arbitrage on the rules alone. Almost all overseas funds also remain closed to new money (Invesco FoFs stopped lumpsum again on 29 Sep; Baroda BNP Paribas Aqua is open but small). HDFC Defence Fund accepts only SIP/STP (Rs 25,000 per PAN)."
 }
